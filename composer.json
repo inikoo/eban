@@ -1,11 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "inikoo/eban",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Banner SAAS.",
     "keywords": ["framework", "laravel"],
-    "license": "MIT",
+    "license": "AGPL",
     "require": {
-        "php": "^8.0.2",
+        "php": "^8.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
