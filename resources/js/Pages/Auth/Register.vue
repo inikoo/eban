@@ -1,103 +1,98 @@
+<!--
+  - Author: Raul Perusquia <raul@inikoo.com>
+  - Created: Fri, 13 Jan 2023 15:11:31 Malaysia Time, Kuala Lumpur, Malaysia
+  - Copyright (c) 2023, Inikoo Ltd
+  -->
+
 <script setup>
+import {LockClosedIcon} from '@heroicons/vue/20/solid';
+import {Head, Link, useForm} from '@inertiajs/inertia-vue3';
 import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
-import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
 
 const form = useForm({
-    name: '',
-    email: '',
-    password: '',
-    password_confirmation: '',
-    terms: false,
-});
+                         name                 : '',
+                         email                : '',
+                         password             : '',
+                         password_confirmation: '',
+                         terms                : false,
+                     });
 
 const submit = () => {
     form.post(route('register'), {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
+
 </script>
 
 <template layout="UIMarketingLayout">
-
-        <Head title="Register" />
-
-        <form @submit.prevent="submit">
+    <Head title="Registration"/>
+    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-md space-y-8">
             <div>
-                <InputLabel for="name" value="Name" />
+                <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"/>
+                <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Register to your account</h2>
+                <p class="mt-2 text-center text-sm text-gray-600">
 
-                <TextInput
-                    id="name"
-                    type="text"
-                    class="mt-1 block w-full"
-                    v-model="form.name"
-                    required
-                    autofocus
-                    autocomplete="name"
-                />
 
-                <InputError class="mt-2" :message="form.errors.name" />
+                    <Link
+                        :href="route('login')"
+                        class="underline text-sm  text-indigo-600 hover:text-indigo-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                        Already registered?
+                    </Link>
+
+
+                </p>
             </div>
+            <form class="mt-8 space-y-6" @submit.prevent="submit">
 
-            <div class="mt-4">
-                <InputLabel for="email" value="Email" />
+                <div class="-space-y-px rounded-md shadow-sm">
+                    <div>
+                        <label for="email-address" class="sr-only">Email address</label>
+                        <input v-model="form.email" id="email-address" name="email" type="email" autocomplete="email" required=""
+                               class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                               placeholder="Email address"/>
+                        <InputError class="mt-2" :message="form.errors.email"/>
+                    </div>
+                    <div>
+                        <label for="password" class="sr-only">Password</label>
+                        <input v-model="form.password" id="password" name="password" type="password" autocomplete="new-password" required=""
+                               class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                               placeholder="Password"/>
+                        <InputError class="mt-2" :message="form.errors.password"/>
+                    </div>
 
-                <TextInput
-                    id="email"
-                    type="email"
-                    class="mt-1 block w-full"
-                    v-model="form.email"
-                    required
-                    autocomplete="username"
-                />
+                    <div>
+                        <label for="password_confirmation" class="sr-only">Password</label>
+                        <input v-model="form.password_confirmation" id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password" required=""
+                               class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                               placeholder="Confirm Password"/>
+                        <InputError class="mt-2" :message="form.errors.password_confirmation"/>
+                    </div>
 
-                <InputError class="mt-2" :message="form.errors.email" />
-            </div>
+                </div>
 
-            <div class="mt-4">
-                <InputLabel for="password" value="Password" />
 
-                <TextInput
-                    id="password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password"
-                    required
-                    autocomplete="new-password"
-                />
 
-                <InputError class="mt-2" :message="form.errors.password" />
-            </div>
 
-            <div class="mt-4">
-                <InputLabel for="password_confirmation" value="Confirm Password" />
+                <div>
+                    <button type="submit"
 
-                <TextInput
-                    id="password_confirmation"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password_confirmation"
-                    required
-                    autocomplete="new-password"
-                />
+                            :disabled="form.processing"
+                            :class="{ 'opacity-25': form.processing }"
+                            class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+              <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true"/>
+            </span>
+                        Register
+                    </button>
+                </div>
 
-                <InputError class="mt-2" :message="form.errors.password_confirmation" />
-            </div>
+            </form>
 
-            <div class="flex items-center justify-end mt-4">
-                <Link
-                    :href="route('login')"
-                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                    Already registered?
-                </Link>
 
-                <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Register
-                </PrimaryButton>
-            </div>
-        </form>
-
+        </div>
+    </div>
 </template>
+
