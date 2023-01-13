@@ -50,6 +50,13 @@ const submit = () => {
                 <div class="-space-y-px rounded-md shadow-sm">
                     <div>
                         <label for="email-address" class="sr-only">Email address</label>
+                        <input v-model="form.name" id="name" name="name" type="text" autocomplete="name" required=""
+                               class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                               placeholder="Name"/>
+                        <InputError class="mt-2" :message="form.errors.name"/>
+                    </div>
+                    <div>
+                        <label for="email-address" class="sr-only">Email address</label>
                         <input v-model="form.email" id="email-address" name="email" type="email" autocomplete="email" required=""
                                class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                placeholder="Email address"/>
@@ -69,6 +76,10 @@ const submit = () => {
                                class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                placeholder="Confirm Password"/>
                         <InputError class="mt-2" :message="form.errors.password_confirmation"/>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="terms">
+                        <label for="terms" ><a href="https://www.google.com" target="_blank">Accept terms and conditions</a></label>
                     </div>
 
                 </div>
