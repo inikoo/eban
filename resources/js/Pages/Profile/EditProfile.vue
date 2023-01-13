@@ -1,27 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+
+
 import {
-    Switch,
-    SwitchDescription,
-    SwitchGroup,
-    SwitchLabel,
-} from '@headlessui/vue'
-import {
-    BellIcon,
-    CogIcon,
-    CreditCardIcon,
-    KeyIcon,
-    SquaresPlusIcon,
     UserCircleIcon,
 } from '@heroicons/vue/24/outline'
 
-/* const user = {
-    name: 'Debbie Lewis',
-    handle: 'deblewis',
-    email: 'debbielewis@example.com',
-    imageUrl:
-        'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=320&h=320&q=80',
-} */
+
 const subNavigation = [
     { name: 'Profile', href: '#', icon: UserCircleIcon, current: true },
     /*{ name: 'Account', href: '#', icon: CogIcon, current: false },
@@ -31,10 +15,7 @@ const subNavigation = [
     { name: 'Integrations', href: '#', icon: SquaresPlusIcon, current: false },*/
 ]
 
-const availableToHire = ref(true)
-const privateAccount = ref(false)
-const allowCommenting = ref(true)
-const allowMentions = ref(true)
+
 
 import {useForm, usePage} from '@inertiajs/inertia-vue3'
 
@@ -50,7 +31,15 @@ const form = useForm({
 
 </script>
 
-<template>
+<template layout="AppLayout">
+
+    <div class="border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <div class="min-w-0 flex-1">
+            <h1 class="text-lg font-medium leading-6 text-gray-900 sm:truncate">Edit Profile</h1>
+        </div>
+
+    </div>
+
             <div class="mx-auto max-w-screen-xl px-4 pb-6 sm:px-6 lg:px-8 lg:pb-16">
                 <div class="overflow-hidden rounded-lg bg-white shadow">
                     <div class="divide-y divide-gray-200 lg:grid lg:grid-cols-12 lg:divide-y-0 lg:divide-x">
