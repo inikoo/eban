@@ -23,6 +23,8 @@ const submit = () => {
     });
 };
 
+
+
 </script>
 
 <template layout="UIMarketingLayout">
@@ -78,8 +80,8 @@ const submit = () => {
                         <InputError class="mt-2" :message="form.errors.password_confirmation"/>
                     </div>
                     <div>
-                        <input type="checkbox" name="terms">
-                        <label for="terms" ><a href="https://www.google.com" target="_blank">Accept terms and conditions</a></label>
+                        <input type="checkbox" name="terms" v-model="form.processing">
+                        <label for="terms" ><a href="https://www.google.com" target="_blank" for="form.processing"> Accept terms and conditions</a></label>
                     </div>
 
                 </div>
@@ -89,9 +91,8 @@ const submit = () => {
 
                 <div>
                     <button type="submit"
-
-                            :disabled="form.processing"
-                            :class="{ 'opacity-25': form.processing }"
+                            :disabled="!form.processing"
+                            :class="{ 'opacity-25': !form.processing }"
                             class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
               <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true"/>
