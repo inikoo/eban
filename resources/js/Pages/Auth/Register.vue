@@ -1,13 +1,8 @@
-<!--
-  - Author: Raul Perusquia <raul@inikoo.com>
-  - Created: Fri, 13 Jan 2023 15:11:31 Malaysia Time, Kuala Lumpur, Malaysia
-  - Copyright (c) 2023, Inikoo Ltd
-  -->
-
 <script setup>
 import {LockClosedIcon} from '@heroicons/vue/20/solid';
 import {Head, Link, useForm} from '@inertiajs/inertia-vue3';
 import InputError from '@/Components/InputError.vue';
+import {ref} from "vue";
 
 const form = useForm({
                          name                 : '',
@@ -18,29 +13,31 @@ const form = useForm({
                          terms                : false,
                      });
 
+const personal = ref()
+
 const submit = () => {
     form.post(route('register'), {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
 
-const mostrarForm = true;
+const mostrarForm = ref(false);
 
 </script>
 
 <template layout="UIMarketingLayout">
 
     <div class="flex min-h-full items-center justify-around py-12 px-4 sm:px-6 lg:px-8">
-        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="mostrarForm = true">
             Personal
         </button>
-        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="mostrarForm = true">
             Company
         </button>
     </div>
 
     <Head title="Registration"/>
-    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8" v-if="!mostrarForm">
+    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8" v-if="mostrarForm">
         <div class="w-full max-w-md space-y-8">
             <div>
                 <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"/>
