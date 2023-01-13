@@ -13,7 +13,6 @@ const form = useForm({
                          terms                : false,
                      });
 
-const personal = ref()
 
 const submit = () => {
     form.post(route('register'), {
@@ -21,23 +20,23 @@ const submit = () => {
     });
 };
 
-const mostrarForm = ref(false);
+const showForm = ref(false);
 
 </script>
 
 <template layout="UIMarketingLayout">
 
     <div class="flex min-h-full items-center justify-around py-12 px-4 sm:px-6 lg:px-8">
-        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="mostrarForm = true">
+        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="showForm = true">
             Personal
         </button>
-        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="mostrarForm = true">
+        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="showForm = true">
             Company
         </button>
     </div>
 
     <Head title="Registration"/>
-    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8" v-if="mostrarForm">
+    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8" v-if="showForm">
         <div class="w-full max-w-md space-y-8">
             <div>
                 <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"/>
@@ -96,7 +95,7 @@ const mostrarForm = ref(false);
                     </div>
                     <div>
                         <input type="checkbox" name="terms" v-model="form.processing">
-                        <label for="terms" ><a href="https://www.google.com" target="_blank" for="form.processing"> Accept terms and conditions</a></label>
+                        <label for="terms" ><a href="#" target="_blank" > Accept terms and conditions</a></label>
                     </div>
 
                 </div>
