@@ -12,6 +12,7 @@ import InputError from '@/Components/InputError.vue';
 const form = useForm({
                          name                 : '',
                          email                : '',
+                         company              : '',
                          password             : '',
                          password_confirmation: '',
                          terms                : false,
@@ -23,7 +24,7 @@ const submit = () => {
     });
 };
 
-
+const mostrarForm = true;
 
 </script>
 
@@ -39,7 +40,7 @@ const submit = () => {
     </div>
 
     <Head title="Registration"/>
-    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8" v-if="!mostrarForm">
         <div class="w-full max-w-md space-y-8">
             <div>
                 <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"/>
@@ -88,6 +89,13 @@ const submit = () => {
                                class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                placeholder="Confirm Password"/>
                         <InputError class="mt-2" :message="form.errors.password_confirmation"/>
+                    </div>
+                    <div>
+                        <label for="company" class="sr-only">company</label>
+                        <input v-model="form.company" id="company" name="company" type="text" autocomplete="company" required=""
+                               class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                               placeholder="Company"/>
+                        <InputError class="mt-2" :message="form.errors.company"/>
                     </div>
                     <div>
                         <input type="checkbox" name="terms" v-model="form.processing">
