@@ -28,6 +28,16 @@ const submit = () => {
 </script>
 
 <template layout="UIMarketingLayout">
+
+    <div class="flex min-h-full items-center justify-around py-12 px-4 sm:px-6 lg:px-8">
+        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Personal
+        </button>
+        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Company
+        </button>
+    </div>
+
     <Head title="Registration"/>
     <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-md space-y-8">
