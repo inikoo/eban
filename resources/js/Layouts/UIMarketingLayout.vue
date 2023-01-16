@@ -26,7 +26,6 @@ const hasHero = computed(() => {
 
 <template>
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-
         <div class="relative overflow-hidden bg-white">
             <div class="mx-auto max-w-7xl">
                 <div class="relative z-10 bg-white pb-8" :class="hasHero?' sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32':''">
@@ -62,6 +61,7 @@ const hasHero = computed(() => {
                             </nav>
                         </div>
 
+                        <!-- Mobile -->
                         <transition enter-active-class="duration-150 ease-out" enter-from-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in"
                                     leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
                             <PopoverPanel focus class="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden">
@@ -82,13 +82,13 @@ const hasHero = computed(() => {
                                         <a v-for="item in navigation" :key="item.name" :href="item.href"
                                            class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ item.name }}</a>
                                     </div>
-                                    <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">Log in</a>
+                                    <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">Log in X</a>
                                 </div>
                             </PopoverPanel>
                         </transition>
                     </Popover>
 
-                    <main class="mx-auto mt-10 max-w-7xl px-6sm:mt-12 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 ">
+                    <main class="mx-auto mt-10 max-w-7xl px-6sm:mt-12 md:mt-16 lg:mt-20 lg:px-8 xl:mt-22 ">
                         <slot></slot>
                     </main>
                 </div>
@@ -99,5 +99,6 @@ const hasHero = computed(() => {
             </div>
         </div>
     </div>
+    xx
 </template>
 
