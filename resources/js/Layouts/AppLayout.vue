@@ -143,7 +143,7 @@ const sidebarOpen = ref(false);
                             </div>
                             <div class="py-1">
                                 <MenuItem v-slot="{ active }">
-                                    <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 py-2 text-sm']">Logout</a>
+                                    <Link  method="post" as="button" :href="route('logout')" :class="[active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 py-2 text-sm']">Logout</Link>
                                 </MenuItem>
                             </div>
                         </MenuItems>
@@ -238,7 +238,7 @@ const sidebarOpen = ref(false);
                                     </div>
                                     <div class="py-1">
                                         <MenuItem v-slot="{ active }">
-                                            <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 py-2 text-sm']">Logout</a>
+                                            <Link method="post" as="button"  :href="route('logout')" :class="[active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 py-2 text-sm']">Logout</Link>
                                         </MenuItem>
                                     </div>
                                 </MenuItems>
