@@ -75,7 +75,7 @@ function showRegistration(type) {
                                placeholder="Name"/>
                         <InputError class="mt-2" :message="form.errors.name"/>
                     </div>
-                    <div>
+                    <div class="pt-2">
                         <label for="name" class="block text-sm font-medium text-gray-700">Email address</label>
                         <label for="email-address" class="sr-only">Email address</label>
                         <input v-model="form.email" id="email-address" name="email" type="email" autocomplete="email" required=""
@@ -83,7 +83,7 @@ function showRegistration(type) {
                                placeholder="Email address"/>
                         <InputError class="mt-2" :message="form.errors.email"/>
                     </div>
-                    <div>
+                    <div class="pt-2">
                         <label for="name" class="block text-sm font-medium text-gray-700">Password</label>
                         <label for="password" class="sr-only">Password</label>
                         <input v-model="form.password" id="password" name="password" type="password" autocomplete="new-password" required=""
@@ -91,7 +91,7 @@ function showRegistration(type) {
                                placeholder="Password"/>
                         <InputError class="mt-2" :message="form.errors.password"/>
                     </div>
-                    <div>
+                    <div class="pt-2">
                         <label for="name" class="block text-sm font-medium text-gray-700">Confirm Password</label>
                         <label for="password_confirmation" class="sr-only">Password</label>
                         <input v-model="form.password_confirmation" id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password" required=""
@@ -99,7 +99,7 @@ function showRegistration(type) {
                                placeholder="Confirm Password"/>
                         <InputError class="mt-2" :message="form.errors.password_confirmation"/>
                     </div>
-                    <div v-if="companyEnabled">
+                    <div v-if="companyEnabled" class="pt-2">
                         <label for="name" class="block text-sm font-medium text-gray-700">Company name</label>
                         <label for="company" class="sr-only">company</label>
                         <input v-model="form.company" id="company" name="company" type="text" autocomplete="company" required=""

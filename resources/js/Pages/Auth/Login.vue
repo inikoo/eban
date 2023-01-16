@@ -44,17 +44,19 @@ const submit = () => {
             </div>
             <form class="mt-8 space-y-6" @submit.prevent="submit">
                 <input type="hidden" name="remember" value="true"/>
-                <div class="-space-y-px rounded-md shadow-sm">
+                <div class="space-y-6 rounded-md shadow-sm">
                     <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Email Address</label>
                         <label for="email-address" class="sr-only">Email address</label>
                         <input v-model="form.email" id="email-address" name="email" type="email" autocomplete="email" required=""
-                               class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                               class="relative block w-full appearance-none  rounded-md border border-gray-500 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                placeholder="Email address"/>
                     </div>
                     <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Password</label>
                         <label for="password" class="sr-only">Password</label>
                         <input v-model="form.password" id="password" name="password" type="password" autocomplete="current-password" required=""
-                               class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                               class="relative block w-full appearance-none rounded-md border border-gray-500 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                placeholder="Password"/>
 
                     </div>
