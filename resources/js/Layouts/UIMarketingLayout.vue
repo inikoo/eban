@@ -26,14 +26,16 @@ const hasHero = computed(() => {
 </script>
 
 <template>
-    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8 ">
         <div class="relative overflow-hidden bg-white">
             <div class="mx-auto max-w-7xl">
-                <div class="relative z-10 bg-white pb-8" :class="hasHero?' sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32':''">
+                <!-- experimental solution, pb-40 makes the footer be at the end in the register page -->
+                <div class="relative z-10 bg-white pb-40" :class="hasHero?' sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32':''">
                     <svg v-if="hasHero" class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none"
                          aria-hidden="true">
                         <polygon points="50,0 100,0 50,100 0,100"/>
                     </svg>
+                    <!-- experimental solution, pb-40 makes the footer be at the end in the register page -->
 
                     <Popover>
                         <div class="relative px-6 pt-6 lg:px-8">
@@ -99,7 +101,7 @@ const hasHero = computed(() => {
                      src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
             </div>
         </div>
+        <Footer></Footer>
     </div>
-    <Footer></Footer>
 </template>
 
