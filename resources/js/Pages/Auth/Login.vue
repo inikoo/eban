@@ -37,7 +37,7 @@ const submit = () => {
                 <p class="mt-2 text-center text-sm text-gray-600">
                     or
                     {{ ' ' }}
-                    <Link :href="route('register')" class="font-medium text-indigo-600 hover:text-indigo-500">
+                    <Link :href="route('ui-marketing.auth.register')" class="font-medium text-indigo-600 hover:text-indigo-500">
                         register
                     </Link>
                 </p>
@@ -68,7 +68,7 @@ const submit = () => {
                     </div>
 
                     <div class="text-sm">
-                        <Link :href="route('password.request')" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</Link>
+                        <Link :href="route('ui-marketing.auth.password.request')" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</Link>
                     </div>
                 </div>
 

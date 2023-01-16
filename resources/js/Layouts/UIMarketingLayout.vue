@@ -19,7 +19,7 @@ const initialiseApp = inject('initialiseApp');
 const layout = initialiseApp();
 
 const hasHero = computed(() => {
-    return layout.currentRoute === 'home';
+    return layout.currentRoute === 'ui-marketing.home';
 });
 
 </script>
@@ -40,7 +40,7 @@ const hasHero = computed(() => {
                             <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
                                 <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                                     <div class="flex w-full items-center justify-between md:w-auto">
-                                        <Link :href="route('home')">
+                                        <Link :href="route('ui-marketing.home')">
                                             <span class="sr-only">Your Company</span>
                                             <img alt="Your Company" class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"/>
                                         </Link>
@@ -56,8 +56,8 @@ const hasHero = computed(() => {
                                 <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
                                     <a v-for="item in navigation" :key="item.name" :href="item.href" class="font-medium text-gray-500 hover:text-gray-900">{{ item.name }}</a>
 
-                                    <Link :href="route('login')" class="font-medium text-indigo-600 hover:text-indigo-500">Log in</Link>
-                                    <Link :href="route('register')" class="font-medium text-indigo-600 hover:text-indigo-500">Register</Link>
+                                    <Link :href="route('ui-marketing.auth.login')" class="font-medium text-indigo-600 hover:text-indigo-500">Log in</Link>
+                                    <Link :href="route('ui-marketing.auth.register')" class="font-medium text-indigo-600 hover:text-indigo-500">Register</Link>
                                 </div>
                             </nav>
                         </div>

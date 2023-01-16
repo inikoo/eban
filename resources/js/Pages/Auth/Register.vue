@@ -15,7 +15,7 @@ const form = useForm({
 
 
 const submit = () => {
-    form.post(route('register'), {
+    form.post(route('ui-marketing.auth.register'), {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
@@ -45,7 +45,7 @@ const showForm = ref(false);
 
 
                     <Link
-                        :href="route('login')"
+                        :href="route('ui-marketing.auth.login')"
                         class="underline text-sm  text-indigo-600 hover:text-indigo-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
                         Already registered?
