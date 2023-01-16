@@ -21,16 +21,26 @@ const submit = () => {
 };
 
 const showForm = ref(false);
+const companyEnabled = ref(false)
+
+function showRegistration(type) {
+    showForm.value = true;
+    companyEnabled.value = true
+    if(type === "personal") {
+        companyEnabled.value = false
+    }
+
+}
 
 </script>
 
 <template layout="UIMarketingLayout">
 
-    <div class="flex min-h-full items-center justify-around py-12 px-4 sm:px-6 lg:px-8">
-        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="showForm = true">
+    <div v-if="!showForm" class="flex min-h-full items-center justify-around py-12 px-4 sm:px-6 lg:px-8">
+        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="showRegistration('personal')">
             Personal
         </button>
-        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="showForm = true">
+        <button class="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" v-on:click="showRegistration('company')">
             Company
         </button>
     </div>
@@ -88,7 +98,7 @@ const showForm = ref(false);
                     </div>
                     <div>
                         <label for="company" class="sr-only">company</label>
-                        <input v-model="form.company" id="company" name="company" type="text" autocomplete="company" required=""
+                        <input  v-if="companyEnabled" v-model="form.company" id="company" name="company" type="text" autocomplete="company" required=""
                                class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                placeholder="Company"/>
                         <InputError class="mt-2" :message="form.errors.company"/>
@@ -97,7 +107,6 @@ const showForm = ref(false);
                         <input type="checkbox" name="terms" v-model="form.processing">
                         <label for="terms" ><a href="#" target="_blank" > Accept terms and conditions</a></label>
                     </div>
-
                 </div>
 
 
