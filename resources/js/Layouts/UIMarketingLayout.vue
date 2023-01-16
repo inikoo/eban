@@ -8,6 +8,7 @@ import {Link} from '@inertiajs/inertia-vue3';
 import {Popover, PopoverButton, PopoverPanel} from '@headlessui/vue';
 import {Bars3Icon, XMarkIcon} from '@heroicons/vue/24/outline';
 import {computed, inject} from 'vue';
+import Footer from "@/Components/Footer.vue";
 
 const navigation = [
     {name: 'Product', href: '#'},
@@ -99,6 +100,6 @@ const hasHero = computed(() => {
             </div>
         </div>
     </div>
-    xx
+    <Footer></Footer>
 </template>
 

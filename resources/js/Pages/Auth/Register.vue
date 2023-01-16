@@ -127,11 +127,9 @@ function showRegistration(type) {
                         Register
                     </button>
                 </div>
-
             </form>
-
-
         </div>
     </div>
+
 </template>
 
