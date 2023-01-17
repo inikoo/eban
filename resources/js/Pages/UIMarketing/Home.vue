@@ -6,6 +6,7 @@ import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
 import Cta from "@/Components/UIMarketing/Sections/Cta.vue";
 import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
 import Faq from "@/Components/UIMarketing/Sections/Faq.vue";
+import Stats from "@/Components/UIMarketing/Sections/Stats.vue";
 
 const featuresData = {
     title: "Hello",
@@ -36,6 +37,8 @@ const featuresData = {
         },
     ]
 }
+
+
 
 const homeSloganData = {
     title: 'Hello',
@@ -113,12 +116,35 @@ const faqsData = {
     }
 }
 
+const statsData = {
+    title: 'the title',
+    paragraph: 'Paragraph',
+    stats: {
+        'first': {
+            id: 1,
+            stat: '8K+',
+            emphasis: 'Companies',
+            rest: 'use laoreet amet lacus nibh integer quis.'
+        },
+        'second': {
+            id: 2, stat: '25K+', emphasis: 'Countries around the globe', rest: 'lacus nibh integer quis.'
+        },
+        'third': {
+            id: 3, stat: '98%', emphasis: 'Customer satisfaction', rest: 'laoreet amet lacus nibh integer quis.'
+        },
+        'fourth': {
+            id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.'
+        }
+    }
+}
+
 
 </script>
 
 <template layout="UIMarketingLayout">
     <Hero :data="homeSloganData"></Hero>
     <Features :data="featuresData"></Features>
+    <stats :data="statsData"></stats>
     <Cta :data="ctaData"></Cta>
     <Pricing :data="pricingData"></Pricing>
     <Faq :data="faqsData"></Faq>
