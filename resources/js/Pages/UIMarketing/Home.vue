@@ -3,9 +3,9 @@
 import {BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon} from "@heroicons/vue/24/outline";
 import Features from "@/Components/UIMarketing/Sections/Features.vue";
 import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
-import Cta from "@/Components/UIMarketing/Sections/Cta.vue";
+import CTA from "@/Components/UIMarketing/Sections/CTA.vue";
 import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
-import Faq from "@/Components/UIMarketing/Sections/Faq.vue";
+import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
 import Stats from "@/Components/UIMarketing/Sections/Stats.vue";
 import Testimonial from "@/Components/UIMarketing/Sections/Testimonial.vue";
 
@@ -160,10 +160,10 @@ const testimonialData = {
 <template layout="UIMarketingLayout">
     <Hero :data="homeSloganData"></Hero>
     <Features :data="featuresData"></Features>
-    <stats :data="statsData"></stats>
-    <Cta :data="ctaData"></Cta>
+    <Stats :data="statsData"></Stats>
+    <CTA :data="ctaData"></CTA>
     <Pricing :data="pricingData"></Pricing>
     <Testimonial :data="testimonialData"></Testimonial>
-    <Faq :data="faqsData"></Faq>
+    <FAQ :data="faqsData"></FAQ>
 </template>
 

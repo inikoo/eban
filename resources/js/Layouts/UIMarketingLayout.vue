@@ -13,9 +13,9 @@ import FeaturedSectionCenteredGrid from "@/Components/UIMarketing/Sections/Featu
 
 
 const navigation = [
-    {name: 'Product', href: '#'},
-    {name: 'Features', href: '#'},
-    {name: 'Company', href: '#'},
+    {name: 'Products', route: 'ui-marketing.products'},
+    {name: 'Features', route: 'ui-marketing.features'},
+    {name: 'Company', route: 'ui-marketing.features'},
 ];
 
 const initialiseApp = inject('initialiseApp');
@@ -51,7 +51,7 @@ const layout = initialiseApp();
                                     </div>
                                 </div>
                                 <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                                    <a v-for="item in navigation" :key="item.name" :href="item.href" class="font-medium text-gray-500 hover:text-gray-900">{{ item.name }}</a>
+                                    <Link v-for="item in navigation" :key="item.name" :href="route(item.route)" class="font-medium text-gray-500 hover:text-gray-900">{{ item.name }}</Link>
 
                                     <Link :href="route('ui-marketing.auth.login')" class="font-medium text-indigo-600 hover:text-indigo-500">Log in</Link>
                                     <Link :href="route('ui-marketing.auth.register')" class="font-medium text-indigo-600 hover:text-indigo-500">Register</Link>
@@ -77,8 +77,8 @@ const layout = initialiseApp();
                                         </div>
                                     </div>
                                     <div class="space-y-1 px-2 pt-2 pb-3">
-                                        <a v-for="item in navigation" :key="item.name" :href="item.href"
-                                           class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ item.name }}</a>
+                                        <Link v-for="item in navigation" :key="item.name" :href="route(item.route)"
+                                           class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ item.name }}</Link>
                                     </div>
                                     <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">Log in X</a>
                                 </div>

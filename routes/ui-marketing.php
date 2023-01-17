@@ -5,15 +5,19 @@
  * Copyright (c) 2023, Inikoo Ltd
  */
 
+use App\Actions\UI\Guest\DisplayFeatures;
 use App\Actions\UI\Guest\DisplayHome;
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Auth\NewPasswordController;
-use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Actions\UI\Guest\DisplayProducts;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', DisplayHome::class)->name('home');
+
+Route::get('/products', DisplayProducts::class)->name('products');
+
+Route::get('/features', DisplayFeatures::class)->name('features');
+
+
 
 
 
