@@ -3,6 +3,7 @@
 import {BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon} from "@heroicons/vue/24/outline";
 import Features from "@/Components/UIMarketing/Sections/Features.vue";
 import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
+import Cta from "@/Components/UIMarketing/Sections/Cta.vue";
 
 const featuresData = {
     title: "Hello",
@@ -43,11 +44,20 @@ const homeSloganData = {
 
 }
 
+const ctaData = {
+
+    title: 'Hello',
+    titleH2: 'Hello',
+    paragraph: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha si',
+    button: 'Hello'
+}
+
 
 </script>
 
 <template layout="UIMarketingLayout">
     <Hero :data = "homeSloganData"></Hero>
     <features :data = "featuresData"></features>
+    <Cta :data = "ctaData"></Cta>
 </template>
 
