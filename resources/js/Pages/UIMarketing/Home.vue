@@ -5,6 +5,7 @@ import Features from "@/Components/UIMarketing/Sections/Features.vue";
 import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
 import Cta from "@/Components/UIMarketing/Sections/Cta.vue";
 import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
+import Faq from "@/Components/UIMarketing/Sections/Faq.vue";
 
 const featuresData = {
     title: "Hello",
@@ -54,31 +55,51 @@ const ctaData = {
 }
 
 const pricingData = {
-        title: 'the title',
-        paragraph: 'Paragraph',
-        paragraphTwo: 'paragraphTwo',
-        planEconomicName: 'Name',
-        planEconomicPrice: 30,
-        planEconomicDuration: '/month',
-        planEconomyButton: 'Nice to meet click right now',
-        planMediumName: 'name',
-        planMediumPrice: 120,
-        planMediumDuration: '/month',
-        planMediumButton: 'Hi how are you',
-        planExpensiveName: 'Hi',
-        planExpensivePrice: 29999,
-        planExpensiveDuration: '/month',
-        planExpensiveButton: 'hi'
+    title: 'the title',
+    paragraph: 'Paragraph',
+    paragraphTwo: 'paragraphTwo',
+    plans: {
+        'economic': {
+            name: 'Name',
+            price: 30,
+            duration: '/month',
+            button: 'Nice to meet click right now',
+            featuresEconomic: ['Pariatur quod simix11lique', 'Sapiente libero doloribus', 'Vel ipsa esse repudiandae']
+        },
+        'medium': {
+            name: 'hola',
+            price: 30,
+            duration: '/month',
+            button: 'Nice to meet click right now',
+            featuresMedium: [
+                'Quia rem est sed impedit magnam',
+                'Dolorem vero ratione voluptates',
+                'Qui sed ab doloribus voluptatem dolore',
+                'Laborum commodi molestiae id et fugiat',
+                'Nam ut ipsa nesciunt culpa modi dolor',
+            ]
+        },
+        'expensive': {
+            name: 'Name',
+            price: 30,
+            duration: '/month',
+            button: 'Nice to meet click right now',
+            featuresExpensive : [
+                'Quia rem est sed impedit magnam',
+                'Dolorem vero ratione voluptates'
+            ]
+        },
+    },
 }
-
 
 
 </script>
 
 <template layout="UIMarketingLayout">
-    <Hero :data = "homeSloganData"></Hero>
-    <features :data = "featuresData"></features>
-    <Cta :data = "ctaData"></Cta>
-    <pricing :data = "pricingData" ></pricing>
+    <Hero :data="homeSloganData"></Hero>
+    <Features :data="featuresData"></Features>
+    <Cta :data="ctaData"></Cta>
+    <Pricing :data="pricingData"></Pricing>
+    <Faq></Faq>
 </template>
 

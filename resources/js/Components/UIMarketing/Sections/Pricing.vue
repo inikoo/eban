@@ -1,16 +1,6 @@
 <script setup>
 import { CheckIcon } from '@heroicons/vue/24/outline'
 
-const economyPlan = ['Pariatur quod similique', 'Sapiente libero doloribus', 'Vel ipsa esse repudiandae']
-const expensivePlan = ['Pariatur quod similique', 'Sapiente libero doloribus', 'Vel ipsa esse repudiandae']
-const mediumPlan = [
-    'Quia rem est sed impedit magnam',
-    'Dolorem vero ratione voluptates',
-    'Qui sed ab doloribus voluptatem dolore',
-    'Laborum commodi molestiae id et fugiat',
-    'Nam ut ipsa nesciunt culpa modi dolor',
-]
-
 defineProps( ['data'])
 
 </script>
@@ -35,19 +25,19 @@ defineProps( ['data'])
                                 <div class="flex flex-1 flex-col">
                                     <div class="bg-white px-6 py-10">
                                         <div>
-                                            <h3 class="text-center text-2xl font-medium text-gray-900" id="tier-hobby">{{data.planEconomicName}}</h3>
+                                            <h3 class="text-center text-2xl font-medium text-gray-900" id="tier-hobby">{{data.plans.economic.name}}</h3>
                                             <div class="mt-4 flex items-center justify-center">
                         <span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
                           <span class="mt-2 mr-2 text-4xl font-medium tracking-tight">$</span>
-                          <span class="font-bold">{{data.planEconomicPrice}}</span>
+                          <span class="font-bold">{{data.plans.economic.price}}</span>
                         </span>
-                                                <span class="text-xl font-medium text-gray-500">{{data.planEconomicDuration}}</span>
+                                                <span class="text-xl font-medium text-gray-500">{{data.plans.economic.duration}}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="flex flex-1 flex-col justify-between border-t-2 border-gray-100 bg-gray-50 p-6 sm:p-10 lg:p-6 xl:p-10">
                                         <ul role="list" class="space-y-4">
-                                            <li v-for="economy in economyPlan" :key="economy" class="flex items-start">
+                                            <li v-for="economy in data.plans.economic.featuresEconomic" :key="economy" class="flex items-start">
                                                 <div class="flex-shrink-0">
                                                     <CheckIcon class="h-6 w-6 flex-shrink-0 text-green-500" aria-hidden="true" />
                                                 </div>
@@ -56,7 +46,7 @@ defineProps( ['data'])
                                         </ul>
                                         <div class="mt-8">
                                             <div class="rounded-lg shadow-md">
-                                                <a href="#" class="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50" aria-describedby="tier-hobby">{{data.planEconomyButton}}</a>
+                                                <a href="#" class="block w-full rounded-lg border border-transparent bg-white px-6  text-center text-base font-medium text-indigo-600 hover:bg-gray-50" aria-describedby="tier-hobby">{{ data.plans.economic.button }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -73,19 +63,19 @@ defineProps( ['data'])
                                 </div>
                                 <div class="rounded-t-lg bg-white px-6 pt-12 pb-10">
                                     <div>
-                                        <h3 class="text-center text-3xl font-semibold tracking-tight text-gray-900 sm:-mx-6" id="tier-growth">{{data.planMediumName}}</h3>
+                                        <h3 class="text-center text-3xl font-semibold tracking-tight text-gray-900 sm:-mx-6" id="tier-growth">{{data.plans.medium.name}}</h3>
                                         <div class="mt-4 flex items-center justify-center">
                       <span class="flex items-start px-3 text-6xl tracking-tight text-gray-900 sm:text-6xl">
                         <span class="mt-2 mr-2 text-4xl font-medium tracking-tight">$</span>
-                        <span class="font-bold">{{data.planMediumPrice}}</span>
+                        <span class="font-bold">{{data.plans.medium.price}}</span>
                       </span>
-                                            <span class="text-2xl font-medium text-gray-500">{{data.planMediumDuration}}</span>
+                                            <span class="text-2xl font-medium text-gray-500">{{data.plans.medium.duration}}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="rounded-b-lg border-t-2 border-gray-100 bg-gray-50 px-6 pt-10 pb-8 sm:px-10 sm:py-10">
                                     <ul role="list" class="space-y-4">
-                                        <li v-for="medium in mediumPlan" :key="medium" class="flex items-start">
+                                        <li v-for="medium in data.plans.medium.featuresMedium" :key="medium" class="flex items-start">
                                             <div class="flex-shrink-0">
                                                 <CheckIcon class="h-6 w-6 flex-shrink-0 text-green-500" aria-hidden="true" />
                                             </div>
@@ -94,7 +84,7 @@ defineProps( ['data'])
                                     </ul>
                                     <div class="mt-10">
                                         <div class="rounded-lg shadow-md">
-                                            <a href="#" class="block w-full rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-center text-xl font-medium leading-6 text-white hover:bg-indigo-700" aria-describedby="tier-growth">{{data.planMediumButton}}</a>
+                                            <a href="#" class="block w-full rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-center text-xl font-medium leading-6 text-white hover:bg-indigo-700" aria-describedby="tier-growth">{{data.plans.medium.button}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -105,19 +95,19 @@ defineProps( ['data'])
                                 <div class="flex flex-1 flex-col">
                                     <div class="bg-white px-6 py-10">
                                         <div>
-                                            <h3 class="text-center text-2xl font-medium text-gray-900" id="tier-scale">{{data.planExpensiveName}}</h3>
+                                            <h3 class="text-center text-2xl font-medium text-gray-900" id="tier-scale">{{data.plans.expensive.name}}</h3>
                                             <div class="mt-4 flex items-center justify-center">
                         <span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
                           <span class="mt-2 mr-2 text-4xl font-medium tracking-tight">$</span>
-                          <span class="font-bold">{{data.planExpensivePrice}}</span>
+                          <span class="font-bold">{{data.plans.expensive.price}}</span>
                         </span>
-                                                <span class="text-xl font-medium text-gray-500">{{data.planExpensiveDuration}}</span>
+                                                <span class="text-xl font-medium text-gray-500">{{data.plans.expensive.duration}}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="flex flex-1 flex-col justify-between border-t-2 border-gray-100 bg-gray-50 p-6 sm:p-10 lg:p-6 xl:p-10">
                                         <ul role="list" class="space-y-4">
-                                            <li v-for="expensive in expensivePlan" :key="expensive" class="flex items-start">
+                                            <li v-for="expensive in data.plans.expensive.featuresExpensive" :key="expensive" class="flex items-start">
                                                 <div class="flex-shrink-0">
                                                     <CheckIcon class="h-6 w-6 flex-shrink-0 text-green-500" aria-hidden="true" />
                                                 </div>
@@ -126,7 +116,7 @@ defineProps( ['data'])
                                         </ul>
                                         <div class="mt-8">
                                             <div class="rounded-lg shadow-md">
-                                                <a href="#" class="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50" aria-describedby="tier-scale">{{data.planExpensiveButton}}</a>
+                                                <a href="#" class="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50" aria-describedby="tier-scale">Start your trial</a>
                                             </div>
                                         </div>
                                     </div>
