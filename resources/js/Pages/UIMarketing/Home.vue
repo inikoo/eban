@@ -2,7 +2,7 @@
 
 import {BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon} from "@heroicons/vue/24/outline";
 import Features from "@/Components/UIMarketing/Sections/Features.vue";
-import HomeSlogan from "@/Components/UIMarketing/Sections/HomeSlogan.vue";
+import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
 
 const featuresData = {
     title: "Hello",
@@ -47,7 +47,7 @@ const homeSloganData = {
 </script>
 
 <template layout="UIMarketingLayout">
-    <HomeSlogan :data = "homeSloganData"></HomeSlogan>
+    <Hero :data = "homeSloganData"></Hero>
     <features :data = "featuresData"></features>
 </template>
 
