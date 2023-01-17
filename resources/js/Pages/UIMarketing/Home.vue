@@ -7,6 +7,7 @@ import Cta from "@/Components/UIMarketing/Sections/Cta.vue";
 import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
 import Faq from "@/Components/UIMarketing/Sections/Faq.vue";
 import Stats from "@/Components/UIMarketing/Sections/Stats.vue";
+import Testimonial from "@/Components/UIMarketing/Sections/Testimonial.vue";
 
 const featuresData = {
     title: "Hello",
@@ -138,6 +139,21 @@ const statsData = {
     }
 }
 
+const testimonialData = {
+    people: {
+        'first': {
+            paragraph: 'lorem oifmweifnweiufbwebfweu fhweui huiowfoiuwebnf wei fnwi e fnwien fw',
+            name: 'john',
+            jobPosition: 'CTO'
+        },
+        'second': {
+            paragraph: 'lorem oifmweifnweiufbwebfweu fhweui huiowfoiuwebnf wei fnwi e fnwien fw',
+            name: 'john',
+            jobPosition: 'CTO'
+        }
+    }
+}
+
 
 </script>
 
@@ -147,6 +163,7 @@ const statsData = {
     <stats :data="statsData"></stats>
     <Cta :data="ctaData"></Cta>
     <Pricing :data="pricingData"></Pricing>
+    <Testimonial :data="testimonialData"></Testimonial>
     <Faq :data="faqsData"></Faq>
 </template>
 
