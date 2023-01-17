@@ -9,6 +9,8 @@ import {Popover, PopoverButton, PopoverPanel} from '@headlessui/vue';
 import {Bars3Icon, XMarkIcon} from '@heroicons/vue/24/outline';
 import {computed, inject} from 'vue';
 import Footer from "@/Components/Footer.vue";
+import FeaturedSectionCenteredGrid from "@/Components/UIMarketing/Sections/Features.vue";
+
 
 const navigation = [
     {name: 'Product', href: '#'},
@@ -19,10 +21,6 @@ const navigation = [
 const initialiseApp = inject('initialiseApp');
 const layout = initialiseApp();
 
-const hasHero = computed(() => {
-    return layout.currentRoute === 'ui-marketing.home';
-});
-
 </script>
 
 <template>
@@ -30,11 +28,8 @@ const hasHero = computed(() => {
         <div class="relative overflow-hidden bg-white">
             <div class="mx-auto max-w-7xl">
                 <!-- experimental solution, pb-40 makes the footer be at the end in the register page -->
-                <div class="relative z-10 bg-white pb-40" :class="hasHero?' sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32':''">
-                    <svg v-if="hasHero" class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none"
-                         aria-hidden="true">
-                        <polygon points="50,0 100,0 50,100 0,100"/>
-                    </svg>
+                <div class="relative z-10 bg-white pb-40">
+
                     <!-- experimental solution, pb-40 makes the footer be at the end in the register page -->
 
                     <Popover>
@@ -95,10 +90,6 @@ const hasHero = computed(() => {
                         <slot></slot>
                     </main>
                 </div>
-            </div>
-            <div v-if="hasHero" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
-                     src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
             </div>
         </div>
         <Footer></Footer>

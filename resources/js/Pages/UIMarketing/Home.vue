@@ -1,5 +1,39 @@
 <script setup>
 
+import {BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon} from "@heroicons/vue/24/outline";
+import Features from "@/Components/UIMarketing/Sections/Features.vue";
+
+const featuresData = {
+    title: "Hola",
+    features: [
+        {
+            name: 'Competitive exchange rates',
+            description:
+                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+            icon: GlobeAltIcon,
+        },
+        {
+            name: 'No hidden fees',
+            description:
+                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+            icon: ScaleIcon,
+        },
+        {
+            name: 'Transfers are instant',
+            description:
+                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+            icon: BoltIcon,
+        },
+        {
+            name: 'Mobile X',
+            description:
+                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+            icon: DevicePhoneMobileIcon,
+        },
+    ]
+}
+
+
 </script>
 
 <template layout="UIMarketingLayout">
@@ -24,6 +58,9 @@
                     demo</a>
             </div>
         </div>
+
     </div>
+
+    <features :data = "featuresData"></features>
 </template>
 
