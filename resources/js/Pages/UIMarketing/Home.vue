@@ -92,6 +92,27 @@ const pricingData = {
     },
 }
 
+const faqsData = {
+    questions: {
+        'first': {
+            question: 'how old are you',
+            answer: 17
+        },
+        'second': {
+            question: 'where do you live',
+            answer: 'Malaga',
+        },
+        'third': {
+            question: 'do you like your job?',
+            answer: 'I could be better at home 👍'
+        },
+        'fourth': {
+            question: 'favourite food?',
+            answer: 'the one that is already prepared'
+        },
+    }
+}
+
 
 </script>
 
@@ -100,6 +121,6 @@ const pricingData = {
     <Features :data="featuresData"></Features>
     <Cta :data="ctaData"></Cta>
     <Pricing :data="pricingData"></Pricing>
-    <Faq></Faq>
+    <Faq :data="faqsData"></Faq>
 </template>
 
