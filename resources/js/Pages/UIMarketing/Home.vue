@@ -4,6 +4,7 @@ import {BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon} from "@heroico
 import Features from "@/Components/UIMarketing/Sections/Features.vue";
 import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
 import Cta from "@/Components/UIMarketing/Sections/Cta.vue";
+import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
 
 const featuresData = {
     title: "Hello",
@@ -52,6 +53,25 @@ const ctaData = {
     button: 'Hello'
 }
 
+const pricingData = {
+        title: 'the title',
+        paragraph: 'Paragraph',
+        paragraphTwo: 'paragraphTwo',
+        planEconomicName: 'Name',
+        planEconomicPrice: 30,
+        planEconomicDuration: '/month',
+        planEconomyButton: 'Nice to meet click right now',
+        planMediumName: 'name',
+        planMediumPrice: 120,
+        planMediumDuration: '/month',
+        planMediumButton: 'Hi how are you',
+        planExpensiveName: 'Hi',
+        planExpensivePrice: 29999,
+        planExpensiveDuration: '/month',
+        planExpensiveButton: 'hi'
+}
+
+
 
 </script>
 
@@ -59,5 +79,6 @@ const ctaData = {
     <Hero :data = "homeSloganData"></Hero>
     <features :data = "featuresData"></features>
     <Cta :data = "ctaData"></Cta>
+    <pricing :data = "pricingData" ></pricing>
 </template>
 
