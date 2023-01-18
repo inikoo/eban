@@ -4,6 +4,7 @@ import Stats from "@/Components/UIMarketing/Sections/Stats.vue";
 import CTA from "@/Components/UIMarketing/Sections/CTA.vue";
 import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
 
+
 const statsData = {
     title: 'the title',
     paragraph: 'Paragraph',

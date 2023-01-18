@@ -59,3 +59,12 @@ Route::get('/terms', DisplayTerms::class)->name('terms');
 
 
 
+
+
+
+
+
+
+
+
+

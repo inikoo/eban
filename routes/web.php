@@ -58,4 +58,10 @@ Route::middleware('auth')->group(function () {
         ->name('logout');
 });
 
+Route::get('/{catchall}', function () {
+    return Inertia::render('Error404');
+})->where('catchall', '.*');
+
+
+
 

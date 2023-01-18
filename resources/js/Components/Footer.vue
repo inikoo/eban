@@ -124,6 +124,7 @@ const navigation = {
         },
     ],
 }
+
 </script>
 
 <template>
