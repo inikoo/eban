@@ -5,6 +5,7 @@
  * Copyright (c) 2023, Inikoo Ltd
  */
 
+use App\Actions\UI\Guest\DisplayCompany;
 use App\Actions\UI\Guest\DisplayFeatures;
 use App\Actions\UI\Guest\DisplayHome;
 use App\Actions\UI\Guest\DisplayProducts;
@@ -16,6 +17,9 @@ Route::get('/', DisplayHome::class)->name('home');
 Route::get('/products', DisplayProducts::class)->name('products');
 
 Route::get('/features', DisplayFeatures::class)->name('features');
+
+Route::get('/company', DisplayCompany::class)->name('company');
+
 
 
 

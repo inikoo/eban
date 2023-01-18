@@ -15,7 +15,7 @@ import FeaturedSectionCenteredGrid from "@/Components/UIMarketing/Sections/Featu
 const navigation = [
     {name: 'Products', route: 'ui-marketing.products'},
     {name: 'Features', route: 'ui-marketing.features'},
-    {name: 'Company', route: 'ui-marketing.features'},
+    {name: 'Company', route: 'ui-marketing.company'},
 ];
 
 const initialiseApp = inject('initialiseApp');
