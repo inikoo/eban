@@ -20,17 +20,17 @@ const navigationThree = [
         left: {
             label: 'Products',
             items: [
-                {name: 'Marketing', href: '#'},
-                {name: 'Adwords', href: '#'},
-                {name: 'Seo', href: '#'},
-                {name: 'Email Marketing', href: '#'},
-                {name: 'Banners', href: '#'},
+                {name: 'Marketing', href: 'marketing'},
+                {name: 'Adwords', href: 'adwords'},
+                {name: 'Seo', href: 'seo'},
+                {name: 'Email Marketing', href: 'emailmarketing'},
+                {name: 'Banners', href: 'banners'},
             ]
         },
         right: {
             label: 'Support',
             items: [
-                {name: 'Pricing', href: '#'}
+                {name: 'Pricing', href: 'pricing'}
             ]
         }
     },
@@ -38,13 +38,13 @@ const navigationThree = [
         left: {
             label: 'Company',
             items: [
-                {name: 'About', href: '#'},]
+                {name: 'About', href: 'about'},]
         },
         right: {
             label: 'Legal',
             items: [
-                {name: 'Privacy', href: '#'},
-                {name: 'Terms', href: '#'}
+                {name: 'Privacy', href: 'privacy'},
+                {name: 'Terms', href: 'terms'}
             ]
         }
     }
