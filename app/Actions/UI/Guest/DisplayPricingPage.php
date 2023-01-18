@@ -11,12 +11,12 @@ use Inertia\Inertia;
 use Inertia\Response;
 use Lorisleiva\Actions\Concerns\AsController;
 
-class DisplayPricing{
+class DisplayPricingPage{
     use AsController;
 
     function handle(): Response
     {
-        return Inertia::render('UIMarketing/Pricing');
+        return Inertia::render('UIMarketing/PricingPage');
     }
 }
 

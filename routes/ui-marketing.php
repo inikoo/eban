@@ -13,7 +13,7 @@ use App\Actions\UI\Guest\DisplayEmailMarketing;
 use App\Actions\UI\Guest\DisplayFeatures;
 use App\Actions\UI\Guest\DisplayHome;
 use App\Actions\UI\Guest\DisplayMarketing;
-use App\Actions\UI\Guest\DisplayPricing;
+use App\Actions\UI\Guest\DisplayPricingPage;
 use App\Actions\UI\Guest\DisplayPrivacy;
 use App\Actions\UI\Guest\DisplayProducts;
 use App\Actions\UI\Guest\DisplaySeo;
@@ -39,7 +39,7 @@ Route::get('/emailmarketing', DisplayEmailMarketing::class)->name('emailmarketin
 
 Route::get('/banners', DisplayBanners::class)->name('banners');
 
-Route::get('/pricing', DisplayPricing::class)->name('pricing');
+Route::get('/pricing', DisplayPricingPage::class)->name('pricing');
 
 Route::get('/about', DisplayAbout::class)->name('about');
 
