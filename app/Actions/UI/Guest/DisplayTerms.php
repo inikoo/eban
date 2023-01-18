@@ -16,7 +16,7 @@ class DisplayTerms{
 
     function handle(): Response
     {
-        return Inertia::render('UIMarketing/Pricing');
+        return Inertia::render('UIMarketing/Terms');
     }
 }
 
