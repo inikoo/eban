@@ -11,12 +11,42 @@ use Inertia\Inertia;
 use Inertia\Response;
 use Lorisleiva\Actions\Concerns\AsController;
 
-class DisplayProducts{
+class DisplayProducts
+{
     use AsController;
 
     function handle(): Response
     {
-        return Inertia::render('UIMarketing/Products');
+        $data = [
+            'ctaData' => [
+                'title' => 'this data is different',
+                'titleH2' => 'Hello',
+                'paragraph' => 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha si',
+                'button' => 'Hello'
+            ],
+            'faqsData' => [
+                'questions' => [
+                    'first' => [
+                        'question' => 'this questions are different',
+                        'answer' => 17
+                    ],
+                    'second' => [
+                        'question' => 'hi',
+                        'answer' => 'Malaga',
+                    ],
+                    'third' => [
+                        'question' => '?',
+                        'answer' => 'this questions are different'
+                    ],
+                    'fourth' => [
+                        'question' => 'this questions are different',
+                        'answer' => 'the one that is already prepared'
+                    ]
+                ]
+            ]
+        ];
+
+        return Inertia::render('UIMarketing/Products', $data);
     }
 }
 
