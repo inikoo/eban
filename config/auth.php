@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Backend\BackendUser;
+use App\Models\User;
+
 return [
 
     /*
@@ -62,13 +65,14 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => User::class,
+        ],
+        'backend' => [
+            'driver' => 'eloquent',
+            'model' => BackendUser::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+
     ],
 
     /*
