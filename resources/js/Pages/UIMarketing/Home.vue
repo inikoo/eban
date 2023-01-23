@@ -1,6 +1,5 @@
 <script setup>
 
-import {BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon} from "@heroicons/vue/24/outline";
 import Features from "@/Components/UIMarketing/Sections/Features.vue";
 import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
 import CTA from "@/Components/UIMarketing/Sections/CTA.vue";
@@ -8,7 +7,6 @@ import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
 import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
 import Stats from "@/Components/UIMarketing/Sections/Stats.vue";
 import Testimonial from "@/Components/UIMarketing/Sections/Testimonial.vue";
-import BarCharts from "@/Components/BarCharts.vue";
 
 
 defineProps(['pricingData', 'ctaData' , 'faqsData' , 'homeSloganData' , 'statsData' , 'featuresData' , 'testimonialData'])
@@ -16,7 +14,6 @@ defineProps(['pricingData', 'ctaData' , 'faqsData' , 'homeSloganData' , 'statsDa
 </script>
 
 <template layout="UIMarketingLayout">
-    <bar-charts></bar-charts>
     <Hero :data="homeSloganData"></Hero>
     <Features :data="featuresData"></Features>
     <Stats :data="statsData"></Stats>

@@ -8,13 +8,11 @@ import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers';
 import {ZiggyVue} from '../../vendor/tightenco/ziggy/dist/vue.m';
 import {createPinia} from 'pinia';
 import {i18nVue, loadLanguageAsync} from 'laravel-vue-i18n';
-import VueApexCharts from "vue3-apexcharts";
-
-
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText ||
     'Laravel';
 import {useLayoutStore} from '@/Stores/layout';
+
 const initialiseApp = () => {
     const layout = useLayoutStore();
 
@@ -31,7 +29,7 @@ const initialiseApp = () => {
         if (usePage().props.value.tenant) {
             layout.tenant = usePage().props.value.tenant ?? null;
         }
-        layout.currentRoute=route().current()
+        layout.currentRoute = route().current();
 
     });
     return layout;
@@ -45,7 +43,6 @@ createInertiaApp({
                      setup({el, app, props, plugin}) {
                          return createApp({render: () => h(app, props)}).
                              use(plugin).
-                             use(VueApexCharts).
                              use(createPinia()).
                              use(ZiggyVue, Ziggy).
                              use(i18nVue, {
