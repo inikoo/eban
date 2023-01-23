@@ -212,4 +212,6 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'po_editor_api_key' => env('PO_EDITOR_READ_ONLY_API_KEY', ''),
+
 ];
