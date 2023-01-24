@@ -45,6 +45,20 @@ if($env=='production'){
 }
 
 
+if (empty($_ENV['PRODUCTION_ADMIN_EMAIL'])) {
+exit('ERROR: PRODUCTION_ADMIN_EMAIL var empty or not defined');
+}
+$adminEmail=$_ENV['PRODUCTION_ADMIN_EMAIL'];
+
+if (empty($_ENV['PRODUCTION_ADMIN_CODE'])) {
+exit('ERROR: PRODUCTION_ADMIN_CODE var empty or not defined');
+}
+$adminCode=$_ENV['PRODUCTION_ADMIN_CODE'];
+
+if (empty($_ENV['PRODUCTION_ADMIN_NANE'])) {
+exit('ERROR: PRODUCTION_ADMIN_NANE var empty or not defined');
+}
+$adminName=$_ENV['PRODUCTION_ADMIN_NANE'];
 
 $base_path=$_ENV['DEPLOYMENT_PATH'];
 $path=$base_path.'/'.$env;
@@ -114,20 +128,19 @@ cd {{$new_release_dir}}
 ln -sf {{ $base_path }}/assets/private/ {{ $new_release_dir }}/resources
 npm run build
 
-cd {{ $new_release_dir }}
-{{$php}} artisan migrate:fresh --force
-{{$php}} artisan db:seed
 
 echo "***********************************************************************"
 echo '* Clearing cache and optimising *'
 
 cd {{ $new_release_dir }}
 
-{{$php}} artisan optimize:clear
-{{$php}} artisan key:generate
+
+{{$php}} artisan key:generate --force
 {{$php}} artisan migrate:refresh --force
 {{$php}} artisan db:seed --force
+{{$php}} artisan optimize:clear --quiet
 {{$php}} artisan create:first-deployment
+echo "A3"
 {{$php}} artisan create:admin-user {{ $adminCode }} '{{ $adminName }}' {{ $adminEmail }} -a
 {{$php}} artisan create:admin-token {{ $adminCode }} admin root
 
