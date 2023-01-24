@@ -43,6 +43,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'api-backend-users' => [
+            'driver'   => 'sanctum',
+            'provider' => 'backend-users',
+            'hash'     => false,
+        ],
     ],
 
     /*
@@ -67,10 +72,11 @@ return [
             'driver' => 'eloquent',
             'model' => User::class,
         ],
-        'backend' => [
+        'backend-users' => [
             'driver' => 'eloquent',
             'model' => BackendUser::class,
         ],
+
 
 
     ],
