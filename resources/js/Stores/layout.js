@@ -12,7 +12,7 @@ export const useLayoutStore = defineStore('layout', {
             navigation   : [],
             currentModels: [],
             currentRoute : 'x',
-            tenant : {},
+
         }
     ),
 
