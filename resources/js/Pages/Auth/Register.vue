@@ -1,6 +1,6 @@
 <script setup>
 import {LockClosedIcon} from '@heroicons/vue/20/solid';
-import {Head, Link, useForm} from '@inertiajs/inertia-vue3';
+import {Head, Link, useForm} from '@inertiajs/vue3';
 import InputError from '@/Components/InputError.vue';
 import {ref} from "vue";
 
@@ -25,10 +25,8 @@ const companyEnabled = ref(false)
 
 function showRegistration(type) {
     showForm.value = true;
-    companyEnabled.value = true
-    if(type === "personal") {
-        companyEnabled.value = false
-    }
+
+    companyEnabled.value = type !== "personal";
 
 }
 

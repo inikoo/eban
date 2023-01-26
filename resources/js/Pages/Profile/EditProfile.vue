@@ -17,9 +17,9 @@ const subNavigation = [
 
 
 
-import {useForm, usePage} from '@inertiajs/inertia-vue3'
+import {useForm, usePage} from '@inertiajs/vue3'
 
-const user = usePage().props.value.auth.user;
+const user = usePage().props.auth.user;
 
 const form = useForm({
     name: user.name,

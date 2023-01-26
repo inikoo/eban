@@ -6,7 +6,7 @@
 
 <script setup>
 import {LockClosedIcon} from '@heroicons/vue/20/solid';
-import {Head, Link, useForm} from '@inertiajs/inertia-vue3';
+import {Head, Link, useForm} from '@inertiajs/vue3';
 import InputError from '@/Components/InputError.vue';
 
 defineProps({

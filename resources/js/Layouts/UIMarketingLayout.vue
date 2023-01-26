@@ -4,12 +4,11 @@
   - Copyright (c) 2023, Inikoo Ltd
   -->
 <script setup>
-import {Link} from '@inertiajs/inertia-vue3';
+import {Link} from '@inertiajs/vue3';
 import {Popover, PopoverButton, PopoverPanel} from '@headlessui/vue';
 import {Bars3Icon, XMarkIcon} from '@heroicons/vue/24/outline';
-import {computed, inject} from 'vue';
+import {inject} from 'vue';
 import Footer from "@/Components/Footer.vue";
-import FeaturedSectionCenteredGrid from "@/Components/UIMarketing/Sections/Features.vue";
 
 
 const navigation = [

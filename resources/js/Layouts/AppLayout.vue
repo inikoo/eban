@@ -18,7 +18,7 @@ import {
 } from '@headlessui/vue';
 import {Bars3CenterLeftIcon, Bars4Icon, ClockIcon, HomeIcon, XMarkIcon} from '@heroicons/vue/24/outline';
 import { ChevronUpDownIcon, MagnifyingGlassIcon} from '@heroicons/vue/20/solid';
-import {Link} from '@inertiajs/inertia-vue3';
+import {Link} from '@inertiajs/vue3';
 
 const navigation = [
     {name: 'Home', href: '#', icon: HomeIcon, current: true},
