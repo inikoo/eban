@@ -1,5 +1,4 @@
 <script setup>
-import { BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/vue/24/outline'
 
 defineProps(['data']);
 
@@ -10,9 +9,8 @@ defineProps(['data']);
     <div class="bg-white py-24 sm:py-32 lg:py-40">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="sm:text-center">
-                <h2 class="text-lg font-semibold leading-8 text-indigo-600">Transactions</h2>
-                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{data.title}}</p>
-                <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
+                <h2 class="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl font-bold leading-8 text-indigo-600">{{data.title}}</h2>
+                <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">{{data.paragraph}}</p>
             </div>
 
             <div class="mt-20 max-w-lg sm:mx-auto md:max-w-none">

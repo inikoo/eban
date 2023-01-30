@@ -16,8 +16,7 @@ defineProps(['data'])
         </div>
         <div class="mx-auto max-w-4xl px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-flow-col-dense xl:grid-cols-2 xl:gap-x-8">
             <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-                <h2 class="text-base font-semibold text-indigo-300">Valuable Metrics</h2>
-                <p class="mt-3 text-3xl font-bold tracking-tight text-white">{{data.title}}</p>
+                <h2 class="mt-3 text-3xl font-bold tracking-tight text-white">{{data.title}}</h2>
                 <p class="mt-5 text-lg text-gray-300"> {{data.paragraph}}</p>
                 <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                     <p v-for="item in data.stats" :key="item.id">

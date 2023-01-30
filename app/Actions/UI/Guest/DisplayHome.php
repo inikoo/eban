@@ -19,130 +19,134 @@ class DisplayHome
     {
         $data = [
             'ctaData' => [
-                'title' => 'this data is different',
+                'title' => 'Do you need more information?',
                 'titleH2' => 'Hello',
-                'paragraph' => 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha si',
-                'button' => 'Hello'
+                'paragraph' => 'Click on the button now and setup a meeting with one of our experts',
+                'button' => 'Increase your sales!'
             ],
             'faqsData' => [
                 'questions' => [
                     'first' => [
-                        'question' => 'this questions are different',
-                        'answer' => 17
+                        'question' => 'Can I cancel my subscription?',
+                        'answer' => 'Yes, you can cancel at any time, we will refund the rest of the month to your payment method'
                     ],
                     'second' => [
-                        'question' => 'hi',
-                        'answer' => 'Malaga',
+                        'question' => 'Is there any demo to try the products?',
+                        'answer' => 'Of course! in fact, you can use it for free for 1 week',
                     ],
                     'third' => [
-                        'question' => '?',
-                        'answer' => 'this questions are different'
+                        'question' => 'What if I have a problem with one of the services?',
+                        'answer' => 'We have a 24h life chat for our customers in case they need it'
                     ],
                     'fourth' => [
-                        'question' => 'this questions are different',
-                        'answer' => 'the one that is already prepared'
+                        'question' => 'What if you change the prizes?',
+                        'answer' => 'Prizes only will affect to new customers, if you are with us before the change, we will maintain your the same prize you were paying!'
                     ]
                 ]
             ],
             'homeSloganData' => [
-                'title' => 'Hello',
-                'titleSpan' => 'Hello2',
-                'paragraph' => "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.",
-                'buttonLeft' => "button1",
-                'buttonRight' => "button2",
+                'title' => 'Aw',
+                'titleSpan' => 'Advantage',
+                'paragraph' => "Digital marketing services help business succeed by leveraging cutting-edge technologies and proven strategies to reach your target audience and achieve your marketing goals. Whether you are looking to increase website traffic, generate leads, or build your brand, our team of experts has the skills and experience to help you succeed.",
+                'buttonLeft' => "Products",
+                'buttonRight' => "Our history",
             ],
             'pricingData' => [
-                'title' => 'the title',
-                'paragraph' => 'Paragraph',
-                'paragraphTwo' => 'paragraphTwo',
+                'paragraph' => 'Prizes',
+                'paragraphTwo' => 'Check our different packages',
                 'plans' => [
                     'economic' => [
-                        'name' => 'Name',
-                        'price' => 30,
+                        'name' => 'Basic',
+                        'price' => 99,
                         'duration' => '/month',
-                        'button' => 'Nice to meet click right now',
+                        'button' => 'I want it',
                         'featuresEconomic' => [
-                            'Pariatur quod simix11lique',
-                            'Sapiente libero doloribus',
-                            'Vel ipsa esse repudiandae'
+                            'Bannersnack',
+                            'Monthly Seo',
+                            'Website maintain'
                         ]
                     ],
                     'medium' => [
-                        'name' => 'hello',
-                        'price' => 30,
+                        'name' => 'Standard',
+                        'price' => 299,
                         'duration' => '/month',
-                        'button' => 'Nice to meet click right now',
+                        'button' => 'I want it',
                         'featuresMedium' => [
-                            'Quia rem est sed impedit magnam',
-                            'Dolorem vero ratione voluptates',
-                            'Qui sed ab doloribus voluptatem dolore',
-                            'Laborum commodi molestiae id et fugiat',
-                            'Nam ut ipsa nesciunt culpa modi dolor',
+                            'Bannersnack',
+                            'Monthly Seo',
+                            'Website maintain',
+                            'Ads strategy',
+                            'Email marketing',
                         ]
                     ],
                     'expensive' => [
-                        'name' => 'Name',
-                        'price' => 30,
+                        'name' => 'Advanced',
+                        'price' => 499,
                         'duration' => '/month',
                         'button' => 'Nice to meet click right now',
+                        'featuresExpensive' => [
+                            'All the features mentioned before.',
+                            'Creating your website',
+                        ]
                     ]
                 ]
             ],
             'statsData' => [
-                'title' => 'the title',
-                'paragraph' => 'Paragraph',
+                'title' => 'More than 5 years helping business',
+                'paragraph' => 'Our metrics:',
                 'stats' => [
                     'first' => [
                         'id' => 1,
-                        'stat' => '8K+',
-                        'emphasis' => 'Companies',
-                        'rest' => 'use laoreet amet lacus nibh integer quis.'
+                        'stat' => '+500 Companies',
+                      /*  'emphasis' => 'Companies', */
+                        'rest' => 'Trusted us in the last 5 years'
                     ],
                     'second' => [
                         'id' => 2,
-                        'stat' => '25K+',
-                        'emphasis' => 'Countries around the globe',
-                        'rest' => 'lacus nibh integer quis.'
+                        'stat' => '25 Countries',
+                        'emphasis' => 'around the globe',
+                       /* 'rest' => 'lacus nibh integer quis.' */
                     ],
                     'third' => [
                         'id' => 3,
-                        'stat' => '98%',
+                        'stat' => '99%',
                         'emphasis' => 'Customer satisfaction',
-                        'rest' => 'laoreet amet lacus nibh integer quis.'
+                      /*  'rest' => 'laoreet amet lacus nibh integer quis.'*/
                     ],
                     'fourth' => [
                         'id' => 4,
-                        'stat' => '12M+',
-                        'emphasis' => 'Issues resolved',
-                        'rest' => 'lacus nibh integer quis.'
+                        'stat' => '+1000M of revenue',
+                        'emphasis' => 'For our customer',
+                        'rest' => 'using our services'
                     ]
                 ]
             ],
             'featuresData' => [
-                'title' => "Hello",
+                'title' => "Our Products",
+                'paragraph' => 'Are you looking to increase your online visibility, reach new customers, and grow your business? Look no further! AW-Advantage offers a full suite of digital marketing services that can help you achieve your marketing goals.',
                 'features' => [
                     [
-                        'name' => 'Competitive exchange rates',
+                        'name' => 'Seo',
                         'description' =>
-                            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+                            'Reach your customers organically, get positioned on the browsers and increase your sales.',
                         'icon' => 'GlobeAltIcon',
                     ],
                     [
-                        'name' => 'No hidden fees',
+                        'name' => 'Ads',
                         'description' =>
-                            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+                            'Design, planning, performance. Our experts will create the perfect strategy for your business.',
                         'icon' => 'ScaleIcon',
                     ],
                     [
-                        'name' => 'Transfers are instant',
+                        'name' => 'Bannersnack',
                         'description' =>
-                            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+                            'No time to waste. Automatize your banners using our tools.',
                         'icon' => 'BoltIcon',
                     ],
                     [
-                        'name' => 'Mobile X',
+                        'name' => 'Email Marketing',
                         'description' =>
-                            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+                            'Keep your customers updated with your offers and convert them in revenue',
                         'icon' => 'DevicePhoneMobileIcon',
                     ]
                 ]
@@ -150,14 +154,14 @@ class DisplayHome
             'testimonialData' => [
                 'people' => [
                     'first' => [
-                        'paragraph' => 'lorem oifmweifnweiufbwebfweu fhweui huiowfoiuwebnf wei fnwi e fnwien fw',
-                        'name' => 'john',
-                        'jobPosition' => 'CTO'
+                        'paragraph' => 'Me and my team had a hard moments during the pandemic time, I am happy to say that after one year working with AW Advantage, the company got sales again',
+                        'name' => 'Beatriz',
+                        'jobPosition' => 'CTO of Innovation Company'
                     ],
                     'second' => [
-                        'paragraph' => 'lorem oifmweifnweiufbwebfweu fhweui huiowfoiuwebnf wei fnwi e fnwien fw',
+                        'paragraph' => 'The team designed a strategy with the goals we had, they created for us the path to follow to achieve them',
                         'name' => 'john',
-                        'jobPosition' => 'CTO'
+                        'jobPosition' => 'Co-founder of DigitalSolutions Company'
                     ]
                 ]
             ]
