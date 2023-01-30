@@ -14,23 +14,23 @@
 -->
 <script setup>
 import {defineComponent, h} from 'vue'
+import {Link} from "@inertiajs/vue3";
 
 const navigationThree = [
     {
         left: {
             label: 'Products',
             items: [
-                {name: 'Marketing', href: 'marketing'},
-                {name: 'Adwords', href: 'adwords'},
-                {name: 'Seo', href: 'seo'},
-                {name: 'Email Marketing', href: 'emailmarketing'},
-                {name: 'Banners', href: 'banners'},
+                {name: 'Adwords', route: 'ui-marketing.products.adwords'},
+                {name: 'Seo', route: 'ui-marketing.products.seo'},
+                {name: 'Email Marketing', route: 'ui-marketing.products.emailmarketing'},
+                {name: 'Banners', route: 'ui-marketing.products.banners'},
             ]
         },
         right: {
             label: 'Support',
             items: [
-                {name: 'Pricing', href: 'pricing'}
+                {name: 'Pricing', route: 'ui-marketing.pricing'}
             ]
         }
     },
@@ -38,13 +38,13 @@ const navigationThree = [
         left: {
             label: 'Company',
             items: [
-                {name: 'About', href: 'about'},]
+                {name: 'About', route: 'ui-marketing.about'},]
         },
         right: {
             label: 'Legal',
             items: [
-                {name: 'Privacy', href: 'privacy'},
-                {name: 'Terms', href: 'terms'}
+                {name: 'Privacy', route: 'ui-marketing.privacy'},
+                {name: 'Terms', route: 'ui-marketing.terms'}
             ]
         }
     }
@@ -139,8 +139,8 @@ const navigation = {
                             <h3 class="text-sm font-semibold leading-6 text-white">{{ linkSubGroup.label }}</h3>
                             <ul role="list" class="mt-6 space-y-4">
                                 <li v-for="item in linkSubGroup.items" :key="item.name">
-                                    <a :href="item.href"
-                                       class="text-sm leading-6 text-gray-300 hover:text-white">{{ item.name }}</a>
+                                    <Link :href="route(item.route)"
+                                       class="text-sm leading-6 text-gray-300 hover:text-white">{{ item.name }}</Link>
                                 </li>
                             </ul>
                         </div>

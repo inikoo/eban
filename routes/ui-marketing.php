@@ -33,14 +33,6 @@ Route::get('/company', DisplayCompany::class)->name('company');
 
 Route::get('/marketing', DisplayMarketing::class)->name('marketing');
 
-Route::get('/adwords', DisplayAdwords::class)->name('adwords');
-
-Route::get('/seo', DisplaySeo::class)->name('seo');
-
-Route::get('/emailmarketing', DisplayEmailMarketing::class)->name('emailmarketing');
-
-Route::get('/banners', DisplayBanners::class)->name('banners');
-
 Route::get('/pricing', DisplayPricingPage::class)->name('pricing');
 
 Route::get('/about', DisplayAbout::class)->name('about');
