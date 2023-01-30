@@ -12,8 +12,8 @@ import Footer from "@/Components/Footer.vue";
 
 
 const navigation = [
-    {name: 'Products', route: 'ui-marketing.products'},
-    {name: 'Features', route: 'ui-marketing.features'},
+    {name: 'Products', route: 'ui-marketing.products.index'},
+  /*  {name: 'Features', route: 'ui-marketing.features'}, */
     {name: 'Company', route: 'ui-marketing.company'},
 ];
 

@@ -15,7 +15,6 @@ use App\Actions\UI\Guest\DisplayHome;
 use App\Actions\UI\Guest\DisplayMarketing;
 use App\Actions\UI\Guest\DisplayPricingPage;
 use App\Actions\UI\Guest\DisplayPrivacy;
-use App\Actions\UI\Guest\DisplayProducts;
 use App\Actions\UI\Guest\DisplaySeo;
 use App\Actions\UI\Guest\DisplayTerms;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +22,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', DisplayHome::class)->name('home');
 
-Route::get('/products', DisplayProducts::class)->name('products');
+
+Route::prefix('products')->name('products.')->group(function () {
+    require __DIR__."/marketing/products.php";
+});
 
 Route::get('/features', DisplayFeatures::class)->name('features');
 

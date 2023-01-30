@@ -9,7 +9,9 @@ import Stats from "@/Components/UIMarketing/Sections/Stats.vue";
 import Testimonial from "@/Components/UIMarketing/Sections/Testimonial.vue";
 
 
-defineProps(['pricingData', 'ctaData' , 'faqsData' , 'homeSloganData' , 'statsData' , 'featuresData' , 'testimonialData'])
+defineProps(['pricingData', 'ctaData', 'faqsData', 'homeSloganData', 'statsData', 'featuresData', 'testimonialData'])
+
+
 
 </script>
 
