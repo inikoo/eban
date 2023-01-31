@@ -19,6 +19,15 @@ import {
 import {inject} from 'vue';
 import Footer from "@/Components/Footer.vue";
 
+const logIn = [
+    {name: 'Products', route: 'ui-marketing.auth.login'},
+    /*  {name: 'Features', route: 'ui-marketing.features'}, */
+]
+
+const signUp = [
+    {name: 'Products', route: 'ui-marketing.auth.register'},
+]
+
 
 const navigation = [
     {name: 'Products', route: 'ui-marketing.products.index'},
@@ -45,7 +54,7 @@ const solutions = [
         route: 'ui-marketing.products.seo',
         icon: CursorArrowRaysIcon,
     },
-    { name: 'Email Marketing', route:'ui-marketing.products.emailmarketing', icon: ShieldCheckIcon },
+    {name: 'Email Marketing', route: 'ui-marketing.products.emailmarketing', icon: ShieldCheckIcon},
     {
         name: 'Bannersnack',
         route: 'ui-marketing.products.banners',
@@ -108,8 +117,9 @@ const solutions = [
                                                 class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                                 <div
                                                     class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                                                    <Link v-for="item in solutions" :key="item.name" :href="route(item.route)"
-                                                       class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                                                    <Link v-for="item in solutions" :key="item.name"
+                                                          :href="route(item.route)"
+                                                          class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
                                                         <div
                                                             class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
                                                             <component :is="item.icon" class="h-6 w-6"
@@ -132,8 +142,6 @@ const solutions = [
                                     <Link v-for="item in navigationTwo" :key="item.name" :href="route(item.route)"
                                           class="font-medium text-gray-500 hover:text-gray-900">{{ item.name }}
                                     </Link>
-
-
 
 
                                     <Link :href="route('ui-marketing.auth.login')"
@@ -168,15 +176,21 @@ const solutions = [
                                             </PopoverButton>
                                         </div>
                                     </div>
-                                    <div class="space-y-1 px-2 pt-2 pb-3">
-                                        <Link v-for="item in navigation" :key="item.name" :href="route(item.route)"
-                                              class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                                    <div class="space-y-1 px-2 pt-2 pb-3 text-center">
+
+                                        <Link v-for="item in solutions" :key="item.name" :href="route(item.route)"
+                                              class="block rounded-md px-3 py-2  text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                                             {{ item.name }}
                                         </Link>
                                     </div>
-                                    <a href="#"
-                                       class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">Log
-                                        in X</a>
+                                    <Link v-for="item in logIn" :href="route(item.route)"
+                                          class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">
+                                        Log in
+                                    </Link>
+                                    <Link v-for="item in signUp" :href="route(item.route)"
+                                          class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">
+                                        Sign up
+                                    </Link>
                                 </div>
                             </PopoverPanel>
                         </transition>
