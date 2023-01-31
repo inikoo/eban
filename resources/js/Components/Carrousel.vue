@@ -16,21 +16,21 @@
         <swiper-slide>
             <img
                 class="object-fill w-full h-96"
-                src="https://cdn.pixabay.com/photo/2022/03/20/15/40/nature-7081138__340.jpg"
+                src="https://www.awartisan.eu/wi.php?id=29537"
                 alt="image slide 1"
             />
         </swiper-slide>
         <swiper-slide>
             <img
                 class="object-fill w-full h-96"
-                src="https://cdn.pixabay.com/photo/2022/07/24/17/55/wind-energy-7342177__340.jpg"
+                src="https://www.awartisan.eu/wi.php?id=29535"
                 alt="image slide 2"
             />
         </swiper-slide>
         <swiper-slide>
             <img
                 class="object-fill w-full h-96"
-                src="https://cdn.pixabay.com/photo/2022/07/26/03/35/jogger-7344979__340.jpg"
+                src="https://www.awartisan.eu/wi.php?id=13245"
                 alt="image slide 3"
             />
         </swiper-slide>
