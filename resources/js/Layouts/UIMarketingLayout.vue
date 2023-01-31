@@ -199,7 +199,7 @@ const solutions = [
                         </transition>
                     </Popover>
 
-                    <main class="mx-auto mt-10 max-w-7xl px-6sm:mt-12 md:mt-16 lg:mt-20 lg:px-8 xl:mt-22 ">
+                    <main class="mx-auto mt-10 max-w-7xl px-6sm:mt-12 md:mt-16 lg:mt-20 lg:px-8 xl:mt-3 ">
                         <slot></slot>
                     </main>
                 </div>
