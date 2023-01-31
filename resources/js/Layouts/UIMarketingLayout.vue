@@ -183,14 +183,17 @@ const solutions = [
                                             {{ item.name }}
                                         </Link>
                                     </div>
-                                    <Link v-for="item in logIn" :href="route(item.route)"
-                                          class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">
-                                        Log in
-                                    </Link>
-                                    <Link v-for="item in signUp" :href="route(item.route)"
-                                          class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">
-                                        Sign up
-                                    </Link>
+                                    <div class="flex">
+                                        <Link v-for="item in logIn" :href="route(item.route)"
+                                              class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">
+                                            Log in
+                                        </Link>
+                                        <Link v-for="item in signUp" :href="route(item.route)"
+                                              class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">
+                                            Sign up
+                                        </Link>
+                                    </div>
+
                                 </div>
                             </PopoverPanel>
                         </transition>
