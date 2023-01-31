@@ -7,6 +7,7 @@ import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
 import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
 import Stats from "@/Components/UIMarketing/Sections/Stats.vue";
 import Testimonial from "@/Components/UIMarketing/Sections/Testimonial.vue";
+import Carrousel from "@/Components/Carrousel.vue";
 
 
 defineProps(['pricingData', 'ctaData', 'faqsData', 'homeSloganData', 'statsData', 'featuresData', 'testimonialData'])
@@ -16,6 +17,7 @@ defineProps(['pricingData', 'ctaData', 'faqsData', 'homeSloganData', 'statsData'
 </script>
 
 <template layout="UIMarketingLayout">
+    <Carrousel></Carrousel>
     <Hero :data="homeSloganData"></Hero>
     <Features :data="featuresData"></Features>
     <Stats :data="statsData"></Stats>
