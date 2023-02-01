@@ -10,6 +10,7 @@ import Testimonial from "@/Components/UIMarketing/Sections/Testimonial.vue";
 import Carrousel from "@/Components/Carrousel.vue";
 
 
+
 defineProps(['pricingData', 'ctaData', 'faqsData', 'homeSloganData', 'statsData', 'featuresData', 'testimonialData'])
 
 
