@@ -7,6 +7,7 @@
 import {Link} from "@inertiajs/vue3";
 import {Popover, PopoverButton, PopoverPanel} from '@headlessui/vue';
 import {ChevronDownIcon} from '@heroicons/vue/20/solid'
+import Images from "@/../../public/Images/AWAdvantageLogo.png";
 
 import {
     Bars3Icon,
@@ -81,8 +82,8 @@ const solutions = [
                                     <div class="flex w-full items-center justify-between md:w-auto">
                                         <Link :href="route('ui-marketing.home')">
                                             <span class="sr-only">Your Company</span>
-                                            <img alt="Your Company" class="h-8 w-auto sm:h-10"
-                                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"/>
+                                            <img alt="Your Company" class="h-8 w-auto sm:h-16"
+                                                 :src='Images'/>
                                         </Link>
                                         <div class="-mr-2 flex items-center md:hidden">
                                             <PopoverButton
@@ -199,7 +200,8 @@ const solutions = [
                         </transition>
                     </Popover>
 
-                    <main class="mx-auto mt-10 max-w-7xl px-6sm:mt-12 md:mt-16 lg:mt-20 lg:px-8 xl:mt-3 ">
+                    <main class="mx-auto mt-8 max-w-7xl px-6sm:mt-8 md:mt-3 lg:mt-5 lg:px-1 xl:mt-5
+">
                         <slot></slot>
                     </main>
                 </div>
