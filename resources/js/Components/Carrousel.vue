@@ -1,9 +1,38 @@
+<script>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+
+
+// import required modules
+import { Autoplay, Pagination, Navigation, EffectFade } from "swiper";
+
+export default {
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    setup() {
+        return {
+            modules: [Autoplay, Pagination, Navigation, EffectFade],
+        };
+    },
+};
+</script>
+
 <template>
     <swiper
         :spaceBetween="30"
         :centeredSlides="true"
+        :effect="'fade'"
         :autoplay="{
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
         }"
         :pagination="{
@@ -36,28 +65,3 @@
         </swiper-slide>
     </swiper>
 </template>
-<script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
-import "swiper/css";
-
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
-
-export default {
-    components: {
-        Swiper,
-        SwiperSlide,
-    },
-    setup() {
-        return {
-            modules: [Autoplay, Pagination, Navigation],
-        };
-    },
-};
-</script>
