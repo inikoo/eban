@@ -91,7 +91,7 @@ const social = [
             <div class="mx-auto max-w-xl py-16 sm:py-24">
                 <div class="text-center">
                     <p class="text-base font-semibold text-indigo-600">404</p>
-                    <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">This page does not exist.</h1>
+                    <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">This does not exist.</h1>
                     <p class="mt-2 text-lg text-gray-500">The page you are looking for could not be found.</p>
                 </div>
                 <div class="mt-12">
