@@ -82,7 +82,7 @@ const social = [
 </script>
 
 
-<template layout="UIMarketinglayout">
+<template layout="UIMarketingLayout">
     <div class="bg-white">
         <main class="mx-auto w-full max-w-7xl px-6 lg:px-8">
             <div class="flex-shrink-0 pt-16">
