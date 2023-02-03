@@ -20,10 +20,13 @@ const initialiseApp = () => {
     }
     watchEffect(() => {
 
+        if (usePage().props.theme) {
+            layout.theme= usePage().props.theme ?? null;
+        }
+
         if (usePage().props.layout) {
             layout.navigation = usePage().props.layout.navigation ?? null;
             layout.actions = usePage().props.layout.actions ?? null;
-
         }
         if (usePage().props.tenant) {
             layout.tenant = usePage().props.tenant ?? null;
