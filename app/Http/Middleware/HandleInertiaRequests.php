@@ -39,6 +39,9 @@ class HandleInertiaRequests extends Middleware
                     'location' => $request->url(),
                 ]);
             },
+            'primaryColor' => [
+                'color' => '#0000FF'
+            ],
         ]);
     }
 }

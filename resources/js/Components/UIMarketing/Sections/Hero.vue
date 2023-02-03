@@ -1,6 +1,10 @@
 <script setup>
+import {computed} from "vue";
+import {usePage} from "@inertiajs/vue3";
 
 defineProps(['data'])
+
+const primaryColor = computed(() => usePage().props.primaryColor.color)
 
 </script>
 
@@ -9,7 +13,7 @@ defineProps(['data'])
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
             <span class="block xl:inline">{{data.title}}</span>
             {{ ' ' }}
-            <span class="block text-indigo-600 xl:inline">{{data.titleSpan}}</span>
+            <span  class="block xl:inline">{{data.titleSpan}}{{primaryColor}}</span>
         </h1>
         <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">{{data.paragraph}}</p>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
