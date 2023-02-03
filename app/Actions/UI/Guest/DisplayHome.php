@@ -45,7 +45,7 @@ class DisplayHome
                 ]
             ],
             'homeSloganData' => [
-                'title' => 'Aw',
+                'title' => 'AW',
                 'titleSpan' => 'Advantage',
                 'paragraph' => "Digital marketing services help business succeed by leveraging cutting-edge technologies and proven strategies to reach your target audience and achieve your marketing goals. Whether you are looking to increase website traffic, generate leads, or build your brand, our team of experts has the skills and experience to help you succeed.",
                 'buttonLeft' => "Products",

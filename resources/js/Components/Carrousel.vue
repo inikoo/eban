@@ -44,21 +44,21 @@ export default {
     >
         <swiper-slide>
             <img
-                class="object-fill w-full h-96"
+                class="object-contain w-full h-99 "
                 src="https://www.awartisan.eu/wi.php?id=29537"
                 alt="image slide 1"
             />
         </swiper-slide>
         <swiper-slide>
             <img
-                class="object-fill w-full h-96"
+                class="object-contain w-full h-99"
                 src="https://www.awartisan.eu/wi.php?id=29535"
                 alt="image slide 2"
             />
         </swiper-slide>
         <swiper-slide>
             <img
-                class="object-fill w-full h-96"
+                class="object-contain w-full h-99"
                 src="https://www.awartisan.eu/wi.php?id=13245"
                 alt="image slide 3"
             />

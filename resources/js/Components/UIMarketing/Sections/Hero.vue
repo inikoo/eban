@@ -4,7 +4,7 @@ defineProps(['data'])
 
 import {useLayoutStore} from '@/Stores/layout';
 
-const theme= useLayoutStore().theme
+const theme = useLayoutStore().theme
 
 
 
@@ -12,10 +12,10 @@ const theme= useLayoutStore().theme
 
 <template>
     <div class="sm:text-center lg:text-left">
-        <h1 :class="theme.classes.accentText" class="text-4xl font-bold tracking-tight  sm:text-5xl md:text-6xl">
+        <h1  class="text-4xl font-bold tracking-tight  sm:text-5xl md:text-6xl">
             <span class="block xl:inline">{{data.title}}</span>
             {{ ' ' }}
-            <span class="block xl:inline ">{{data.titleSpan}} </span>
+            <span :class="theme.classes.accentText" class="block xl:inline ">{{data.titleSpan}} </span>
         </h1>
         <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">{{data.paragraph}}</p>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">

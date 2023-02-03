@@ -16,11 +16,8 @@ export const useLayoutStore = defineStore('layout', {
                 classes: {
                     accentText: 'text-indigo-500',
                 },
-            }
-            ,
-
+            },
         }
     ),
-
 });
 
