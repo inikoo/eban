@@ -19,7 +19,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import {ChevronDownIcon} from '@heroicons/vue/20/solid'
 import Images from "@/../../public/Images/AWAdvantageLogo.png";
-import ImageHeader from "@/../../public/Images/OurServicesPlant.jpeg";
+import ImageHeader from "@/../../public/Images/HomeHeroPlantImage.jpeg";
 
 
 const solutions = [
@@ -264,7 +264,7 @@ const footerNavigation = {
                     </div>
                 </div>
 
-                <img :src="ImageHeader" class="h-auto w-full" alt="header"/>
+                <img :src="ImageHeader" class="h-screen w-full" alt="header"/>
 
                 <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95"
                             enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in"
@@ -325,6 +325,7 @@ const footerNavigation = {
                 </transition>
             </Popover>
         </header>
+
 
         <main>
             <!-- Hero section -->
