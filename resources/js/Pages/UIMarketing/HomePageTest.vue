@@ -199,7 +199,7 @@ const footerNavigation = {
         <header>
             <Popover class="relative mx-auto  ">
                 <div
-                    class=" flex max-w-8xl w-full mb-12 absolute ml-5 mt-3 items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
+                    class=" flex max-w-8xl w-full mb-12  ml-5 mt-3 items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
                     <PopoverGroup as="nav" class="hidden space-x-10 md:flex  ml-5">
                         <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
                         <Popover class="relative" v-slot="{ open }">
@@ -263,9 +263,6 @@ const footerNavigation = {
                             up</a>
                     </div>
                 </div>
-
-                <img :src="ImageHeader" class="h-screen w-full" alt="header"/>
-
                 <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95"
                             enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in"
                             leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
@@ -328,6 +325,14 @@ const footerNavigation = {
 
 
         <main>
+            <div class="relative">
+                <div class="">
+                    <img :src="ImageHeader" class="h-screen w-full" alt="header"/>
+                </div>
+                <div class="absolute">
+                    <p>Hello</p>
+                </div>
+            </div>
             <!-- Hero section -->
             <div class="relative">
                 <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"/>
