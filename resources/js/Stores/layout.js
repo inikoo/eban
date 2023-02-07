@@ -14,7 +14,7 @@ export const useLayoutStore = defineStore('layout', {
             currentRoute : 'x',
             theme        : {
                 classes: {
-                    accentText: 'text-indigo-500',
+                    accentText: 'text-red-600',
                 },
             },
         }

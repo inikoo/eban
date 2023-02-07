@@ -42,11 +42,9 @@ class HandleInertiaRequests extends Middleware
 
             'theme'=>[
                 'classes'=>[
-                    'accentText'=>'text-indigo-500',
+                    'accentText'=>'text-red-600',
                 ]
             ]
-
-
         ]);
     }
 }

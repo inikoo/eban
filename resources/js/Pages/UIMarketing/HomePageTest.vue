@@ -19,6 +19,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import {ChevronDownIcon} from '@heroicons/vue/20/solid'
 import Images from "@/../../public/Images/AWAdvantageLogo.png";
+import {useLayoutStore} from "@/Stores/layout";
 
 
 const solutions = [
@@ -191,11 +192,14 @@ const footerNavigation = {
         },
     ],
 }
+
+const theme = useLayoutStore().theme
+
 </script>
 
 <template>
     <div class="bg-white">
-        <header class="bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')]  w-full h-screen bg-auto bg-repeat-round	">
+        <header class="bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')]  w-full h-[50rem] bg-auto bg-repeat-round	">
             <Popover class=" mx-auto  ">
                 <div
                     class=" flex max-w-8xl w-full mb-12  ml-5  items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
@@ -322,11 +326,10 @@ const footerNavigation = {
                 <div class="-mt-32">
                     <div class="mx-auto max-w-7xl py-24 text-black sm:px-6 sm:py-32 lg:px-8">
                         <div class="px-6 py-24 text-center sm:rounded-3xl sm:px-16">
-                            <h2 class="mx-auto max-w-2xl text-4xl font-bold tracking-tight ">Boost your productivity today.</h2>
+                            <h2 :class="theme.classes.accentText" class="mx-auto max-w-2xl text-4xl font-bold tracking-tight ">Boost your productivity today.</h2>
                             <p class="mx-auto mt-6 max-w-xl text-lg leading-8 ">Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.</p>
                             <div class="mt-10 flex items-center justify-center gap-x-6">
-                                <a href="#" class="rounded-md bg-white px-3.5 py-1.5 text-base font-semibold leading-7 text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
-                                <a href="#" class="text-base font-semibold leading-7 ">Learn more <span aria-hidden="true">→</span></a>
+                                <a href="#" class="rounded-md bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
                                 <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7" />
@@ -345,45 +348,20 @@ const footerNavigation = {
 
 
         <main>
-           <!-- <img :src="ImageHeader" class="h-screen w-full" alt="header"/> -->
-           <!-- <div class="bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')] h-screen w-full bg-contain">
-                <p>hello</p>
-            </div> -->
             <!-- Hero section -->
-            <div class="relative">
-                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"/>
-                <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div class="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
-                        <div class="absolute inset-0">
-                            <img class="h-full w-full object-cover"
-                                 src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                                 alt="People working on laptops"/>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"/>
-                        </div>
-                        <div class="relative py-16 px-6 sm:py-24 lg:py-32 lg:px-8">
-                            <h1 class="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                                <span class="block text-white">Take control of your</span>
-                                <span class="block text-indigo-200">customer support</span>
-                            </h1>
-                            <p class="mx-auto mt-6 max-w-lg text-center text-xl text-indigo-200 sm:max-w-3xl">Anim aute
-                                id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
-                                sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-                            <div class="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
-                                <div class="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-                                    <a href="#"
-                                       class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 sm:px-8">Get
-                                        started</a>
-                                    <a href="#"
-                                       class="flex items-center justify-center rounded-md border border-transparent bg-indigo-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8">Live
-                                        demo</a>
-                                </div>
-                            </div>
-                        </div>
+            <div class="bg-white">
+                <div class="flex justify-evenly h-[42rem]">
+                    <div>
+                        <p>Hello</p>
+                    </div>
+                    <div>
+                        <p>Hello</p>
+                    </div>
+                    <div>
+                        <p>Hello</p>
                     </div>
                 </div>
             </div>
-
             <!-- Logo Cloud -->
             <div class="bg-gray-100">
                 <div class="mx-auto max-w-7xl py-16 px-6 lg:px-8">
