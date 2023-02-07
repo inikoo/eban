@@ -19,7 +19,6 @@ import {
 } from '@heroicons/vue/24/outline'
 import {ChevronDownIcon} from '@heroicons/vue/20/solid'
 import Images from "@/../../public/Images/AWAdvantageLogo.png";
-import ImageHeader from "@/../../public/Images/HomeHeroPlantImage.jpeg";
 
 
 const solutions = [
@@ -196,10 +195,10 @@ const footerNavigation = {
 
 <template>
     <div class="bg-white">
-        <header>
-            <Popover class="relative mx-auto  ">
+        <header class="bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')]  w-full h-screen bg-auto bg-repeat-round	">
+            <Popover class=" mx-auto  ">
                 <div
-                    class=" flex max-w-8xl w-full mb-12  ml-5 mt-3 items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
+                    class=" flex max-w-8xl w-full mb-12  ml-5  items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
                     <PopoverGroup as="nav" class="hidden space-x-10 md:flex  ml-5">
                         <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
                         <Popover class="relative" v-slot="{ open }">
@@ -320,19 +319,36 @@ const footerNavigation = {
                         </div>
                     </PopoverPanel>
                 </transition>
+                <div class="-mt-32">
+                    <div class="mx-auto max-w-7xl py-24 text-black sm:px-6 sm:py-32 lg:px-8">
+                        <div class="px-6 py-24 text-center sm:rounded-3xl sm:px-16">
+                            <h2 class="mx-auto max-w-2xl text-4xl font-bold tracking-tight ">Boost your productivity today.</h2>
+                            <p class="mx-auto mt-6 max-w-xl text-lg leading-8 ">Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.</p>
+                            <div class="mt-10 flex items-center justify-center gap-x-6">
+                                <a href="#" class="rounded-md bg-white px-3.5 py-1.5 text-base font-semibold leading-7 text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
+                                <a href="#" class="text-base font-semibold leading-7 ">Learn more <span aria-hidden="true">→</span></a>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
+                                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7" />
+                                <defs>
+                                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
+                                        <stop stop-color="#7775D6" />
+                                        <stop offset="1" stop-color="#E935C1" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </Popover>
         </header>
 
 
         <main>
-            <div class="relative">
-                <div class="">
-                    <img :src="ImageHeader" class="h-screen w-full" alt="header"/>
-                </div>
-                <div class="absolute">
-                    <p>Hello</p>
-                </div>
-            </div>
+           <!-- <img :src="ImageHeader" class="h-screen w-full" alt="header"/> -->
+           <!-- <div class="bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')] h-screen w-full bg-contain">
+                <p>hello</p>
+            </div> -->
             <!-- Hero section -->
             <div class="relative">
                 <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"/>
