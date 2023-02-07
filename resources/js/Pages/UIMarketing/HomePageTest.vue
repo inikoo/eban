@@ -18,7 +18,9 @@ import {
     XMarkIcon,
 } from '@heroicons/vue/24/outline'
 import {ChevronDownIcon} from '@heroicons/vue/20/solid'
-import Images from "@/../../public/Images/AWAdvantageLogo.png";
+import LogoImage from "@/../../public/Images/AWAdvantageLogo.png";
+import OurServicePlantImage from "@/../../public/Images/OurServicesPlant.png";
+import OurServicePenImage from "@/../../public/Images/OurServicesPen.png";
 import {useLayoutStore} from "@/Stores/layout";
 
 
@@ -248,7 +250,7 @@ const theme = useLayoutStore().theme
                     <div class="flex  justify-end lg:w-0 lg:flex-1">
                         <a href="#">
                             <!-- <span class="sr-only">Your Company</span> -->
-                            <img class="object-cover" width="350" height="350" :src='Images' alt=""/>
+                            <img class="object-cover" width="350" height="350" :src='LogoImage' alt=""/>
                         </a>
                     </div>
                     <div class="-my-2 mr-7 md:hidden">
@@ -350,15 +352,17 @@ const theme = useLayoutStore().theme
         <main>
             <!-- Hero section -->
             <div class="bg-white">
-                <div class="flex justify-evenly h-[42rem]">
+                <div class="flex justify-evenly h-[42rem] mt-6">
                     <div>
-                        <p>Hello</p>
+                        <img class="object-cover"  :src='OurServicePlantImage' alt=""/>
                     </div>
                     <div>
-                        <p>Hello</p>
+                        <div>
+                            Hello
+                        </div>
                     </div>
                     <div>
-                        <p>Hello</p>
+                        <img class="object-cover"  :src='OurServicePenImage' alt=""/>
                     </div>
                 </div>
             </div>
