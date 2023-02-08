@@ -263,7 +263,7 @@ const theme = useLayoutStore().theme
                                         fill-opacity="0.7"/>
                                 <defs>
                                     <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-                                        <stop stop-color="#7775D6"/>
+                                        <stop offset="1" stop-color="#7775D6"/>
                                         <stop offset="1" stop-color="#E935C1"/>
                                     </radialGradient>
                                 </defs>
@@ -301,7 +301,7 @@ const theme = useLayoutStore().theme
                         rewarded and motivated by improving your business - helping you grow and succeed is our
                         reward.</p>
                     <div class="mt-8">
-                        <div class="inline-flex rounded-md shadow">
+                        <div class="inline-flex rounded-md">
                             <a href="#"
                                class="inline-flex items-center justify-center rounded-full border border-transparent bg-black px-5 py-3 text-base font-medium text-white">
                                 Visit the help center
@@ -331,7 +331,7 @@ const theme = useLayoutStore().theme
                         rewarded and motivated by improving your business - helping you grow and succeed is our
                         reward.</p>
                     <div class="mt-8">
-                        <div class="inline-flex rounded-md shadow">
+                        <div class="inline-flex rounded-md">
                             <a href="#"
                                class="inline-flex items-center justify-center rounded-full border border-transparent bg-black px-5 py-3 text-base font-medium text-white">
                                 Visit the help center
