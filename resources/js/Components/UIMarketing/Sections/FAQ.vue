@@ -17,7 +17,7 @@ defineProps(['data'])
                             <DisclosureButton class="flex w-full items-start justify-between text-center text-gray-400">
                                 <span class="font-medium text-gray-900 text-center">{{ data.questions.first.question }}</span>
                                 <span class="ml-6 flex h-7 items-center">
-                  <ChevronDownIcon :class="[open ? '-180' : 'rotate-0', 'h-6 w-6 transform']"
+                  <ChevronDownIcon :class="[open ? 'rotate-180' : 'rotate-0 ' , 'h-6 w-6 transform']"
                                    aria-hidden="true"/>
                 </span>
                             </DisclosureButton>
