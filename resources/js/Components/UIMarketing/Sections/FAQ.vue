@@ -8,16 +8,19 @@ defineProps(['data'])
 
 <template>
     <div class="bg-white">
-        <div class="max-w-md max-w-7xl py-12 px-6 sm:py-16 lg:px-3 text-center">
-            <div class="mx-auto max-w-3xl divide-y-2 divide-black text-center">
-                <h2 class="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Our Services</h2>
-                <dl class="mt-6 space-y-6 divide-y divide-black text-center">
-                    <Disclosure as="div" v-for="faq in data" :key="faq" class="pt-6 text-center" v-slot="{ open }">
+        <div class="py-12 px-6 sm:py-16 lg:px-3 flex justify-around">
+            <div>
+                hola
+            </div>
+            <div class=" max-w-3xl divide-y-2 divide-black "> <!-- mx-auto max-w-3xl -->
+                <h2 class="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Our Services</h2>
+                <dl class="mt-6 space-y-6 divide-y divide-black ">
+                    <Disclosure as="div" v-for="faq in data" :key="faq" class="pt-6 " v-slot="{ open }">
                         <dt class="text-lg text-center">
-                            <DisclosureButton class="flex w-full items-start justify-between text-center text-gray-400">
+                            <DisclosureButton class="flex w-full items-start justify-between  text-gray-400">
                                 <span class="font-medium text-gray-900 text-center">{{ data.questions.first.question }}</span>
                                 <span class="ml-6 flex h-7 items-center">
-                  <ChevronDownIcon :class="[open ? 'rotate-180' : 'rotate-0 ' , 'h-6 w-6 transform']"
+                  <ChevronDownIcon :class="[open ? 'rotate-180' : 'rotate-0', 'h-6 w-6 transform']"
                                    aria-hidden="true"/>
                 </span>
                             </DisclosureButton>
@@ -69,11 +72,15 @@ defineProps(['data'])
                         </DisclosurePanel>
                     </Disclosure>
                 </dl>
+                <div class="mt-5 flex items-center justify-center gap-x-6">
+                    <a href="#"
+                       class="rounded-full mt-5 text-red-60 bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm tracking-wide"> Learn More
+                    </a>
+                </div>
             </div>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-                <a href="#"
-                   class="rounded-full text-red-60 bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm tracking-wide"> Learn More
-                </a>
+
+            <div class="">
+                hello
             </div>
         </div>
     </div>

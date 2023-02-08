@@ -19,8 +19,6 @@ import {
 } from '@heroicons/vue/24/outline'
 import {ChevronDownIcon} from '@heroicons/vue/20/solid'
 import LogoImage from "@/../../public/Images/AWAdvantageLogo.png";
-import OurServicePlantImage from "@/../../public/Images/OurServicesPlant.png";
-import OurServicePenImage from "@/../../public/Images/OurServicesPen.png";
 import {useLayoutStore} from "@/Stores/layout";
 import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
 
@@ -343,12 +341,14 @@ const theme = useLayoutStore().theme
                                     Guru
                                 </span>
                             </h2>
-                            <p class="mx-auto mt-6 max-w-xl text-lg leading-6 font-light tracking-wider antialiased">Incididunt sint fugiat pariatur
+                            <p class="mx-auto mt-6 max-w-xl text-lg leading-6 font-light tracking-wider antialiased">
+                                Incididunt sint fugiat pariatur
                                 cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do
                                 ea.</p>
                             <div class="mt-10 flex items-center justify-center gap-x-6">
                                 <a href="#"
-                                   class="rounded-full text-red-60 bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm tracking-wide">Learn More</a>
+                                   class="rounded-full text-red-60 bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm tracking-wide">Learn
+                                    More</a>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
                                  class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
@@ -367,12 +367,13 @@ const theme = useLayoutStore().theme
                 </div>
             </Popover>
         </header>
+    </div>
 
 
         <main>
             <!-- Hero section -->
-            <div class="bg-white">
-                <div class="flex justify-around  h-[44rem] mt-6 min-w-max">
+            <!-- <div class="bg-white h-[40rem]">
+                <div class="flex justify-around mt-6 min-w-max">
                     <div class="">
                         <img class="object-cover rounded-3xl" :src='OurServicePlantImage' alt=""/>
                     </div>
@@ -383,6 +384,9 @@ const theme = useLayoutStore().theme
                         <img class="object-cover rounded-3xl" :src='OurServicePenImage' alt=""/>
                     </div>
                 </div>
+            </div> -->
+            <div class="">
+                <FAQ :data="faqsData"></FAQ>
             </div>
             <!-- Logo Cloud -->
             <div class="bg-gray-100">
@@ -671,6 +675,5 @@ const theme = useLayoutStore().theme
                 </div>
             </div>
         </footer>
-    </div>
 </template>
 
