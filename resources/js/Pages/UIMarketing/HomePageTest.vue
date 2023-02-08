@@ -352,16 +352,16 @@ const theme = useLayoutStore().theme
         <main>
             <!-- Hero section -->
             <div class="bg-white">
-                <div class="flex justify-evenly h-[42rem] mt-6">
-                    <div>
+                <div class="flex justify-evenly  h-[39rem] mt-6">
+                    <div class="">
                         <img class="object-cover"  :src='OurServicePlantImage' alt=""/>
                     </div>
                     <div>
-                        <div>
-                            Hello
+                        <div class="">
+                            <p>Hello</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="">
                         <img class="object-cover"  :src='OurServicePenImage' alt=""/>
                     </div>
                 </div>
