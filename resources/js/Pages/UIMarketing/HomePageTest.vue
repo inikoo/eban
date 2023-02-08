@@ -425,7 +425,7 @@ const theme = useLayoutStore().theme
             </div>
         </div>
         <!-- CTA Section -->
-        <div class="bg-white">
+        <div class="bg-white ">
             <div
                 class="mx-auto max-w-4xl py-16 px-6 sm:py-24 lg:flex lg:max-w-7xl lg:items-center lg:justify-between lg:px-8">
                 <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
