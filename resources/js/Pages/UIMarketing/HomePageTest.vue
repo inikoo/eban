@@ -12,7 +12,6 @@ import {
     InboxIcon,
     PencilSquareIcon,
     QuestionMarkCircleIcon,
-    SparklesIcon,
     TrashIcon,
     UsersIcon,
     XMarkIcon,
@@ -21,6 +20,8 @@ import {ChevronDownIcon} from '@heroicons/vue/20/solid'
 import LogoImage from "@/../../public/Images/AWAdvantageLogo.png";
 import {useLayoutStore} from "@/Stores/layout";
 import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
+import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.png";
+
 
 defineProps(['faqsData'])
 
@@ -370,310 +371,156 @@ const theme = useLayoutStore().theme
     </div>
 
 
-        <main>
-            <!-- Hero section -->
-            <!-- <div class="bg-white h-[40rem]">
-                <div class="flex justify-around mt-6 min-w-max">
-                    <div class="">
-                        <img class="object-cover rounded-3xl" :src='OurServicePlantImage' alt=""/>
-                    </div>
-                    <div>
-                        <FAQ :data="faqsData"></FAQ>
-                    </div>
-                    <div class="">
-                        <img class="object-cover rounded-3xl" :src='OurServicePenImage' alt=""/>
-                    </div>
+    <main>
+        <!-- Hero section -->
+        <!-- <div class="bg-white h-[40rem]">
+            <div class="flex justify-around mt-6 min-w-max">
+                <div class="">
+                    <img class="object-cover rounded-3xl" :src='OurServicePlantImage' alt=""/>
                 </div>
-            </div> -->
-            <div class="">
-                <FAQ :data="faqsData"></FAQ>
-            </div>
-            <!-- Logo Cloud -->
-            <div class="bg-gray-100">
-                <div class="mx-auto max-w-7xl py-16 px-6 lg:px-8">
-                    <p class="text-center text-base font-semibold text-gray-500">Trusted by over 5 very average small
-                        businesses</p>
-                    <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                                 alt="Tuple"/>
-                        </div>
-                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                                 alt="Mirage"/>
-                        </div>
-                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                                 alt="StaticKit"/>
-                        </div>
-                        <div class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                                 alt="Transistor"/>
-                        </div>
-                        <div class="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                                 alt="Workcation"/>
-                        </div>
-                    </div>
+                <div>
+                    <FAQ :data="faqsData"></FAQ>
+                </div>
+                <div class="">
+                    <img class="object-cover rounded-3xl" :src='OurServicePenImage' alt=""/>
                 </div>
             </div>
+        </div> -->
+        <div class="">
+            <FAQ :data="faqsData"></FAQ>
+        </div>
 
-            <!-- Alternating Feature Sections -->
-            <div class="relative overflow-hidden pt-16 pb-32">
-                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"/>
-                <div class="relative">
-                    <div
-                        class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-                        <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
-                            <div>
-                                <div>
-                  <span
-                      class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
-                    <InboxIcon class="h-6 w-6 text-white" aria-hidden="true"/>
-                  </span>
-                                </div>
-                                <div class="mt-6">
-                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Stay on top of customer
-                                        support</h2>
-                                    <p class="mt-4 text-lg text-gray-500">Semper curabitur ullamcorper posuere nunc sed.
-                                        Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet
-                                        sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra
-                                        dui tellus ornare pharetra.</p>
-                                    <div class="mt-6">
-                                        <a href="#"
-                                           class="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Get
-                                            started</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-8 border-t border-gray-200 pt-6">
-                                <blockquote>
-                                    <div>
-                                        <p class="text-base text-gray-500">&ldquo;Cras velit quis eros eget rhoncus
-                                            lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi
-                                            venenatis in euismod ut.&rdquo;</p>
-                                    </div>
-                                    <footer class="mt-3">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="flex-shrink-0">
-                                                <img class="h-6 w-6 rounded-full"
-                                                     src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="text-base font-medium text-gray-700">Marcia Hill, Digital
-                                                Marketing Manager
-                                            </div>
-                                        </div>
-                                    </footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="mt-12 sm:mt-16 lg:mt-0">
-                            <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                                <img
-                                    class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                                    alt="Inbox user interface"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-24">
-                    <div
-                        class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-                        <div class="mx-auto max-w-xl px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
-                            <div>
-                                <div>
-                  <span
-                      class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
-                    <SparklesIcon class="h-6 w-6 text-white" aria-hidden="true"/>
-                  </span>
-                                </div>
-                                <div class="mt-6">
-                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Better understand your
-                                        customers</h2>
-                                    <p class="mt-4 text-lg text-gray-500">Semper curabitur ullamcorper posuere nunc sed.
-                                        Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet
-                                        sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra
-                                        dui tellus ornare pharetra.</p>
-                                    <div class="mt-6">
-                                        <a href="#"
-                                           class="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Get
-                                            started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
-                            <div class="-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                                <img
-                                    class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
-                                    alt="Customer profile user interface"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Logo Cloud -->
 
-            <!-- Gradient Feature Section -->
-            <div class="bg-gradient-to-r from-purple-800 to-indigo-700">
-                <div class="mx-auto max-w-4xl py-16 px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
-                    <h2 class="text-3xl font-bold tracking-tight text-white">Inbox support built for efficiency</h2>
-                    <p class="mt-4 max-w-3xl text-lg text-purple-200">Ac tincidunt sapien vehicula erat auctor
-                        pellentesque rhoncus. Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod mattis
-                        in.</p>
-                    <div
-                        class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
-                        <div v-for="feature in features" :key="feature.name">
-                            <div>
-                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
-                  <component :is="feature.icon" class="h-6 w-6 text-white" aria-hidden="true"/>
-                </span>
-                            </div>
-                            <div class="mt-6">
-                                <h3 class="text-lg font-medium text-white">{{ feature.name }}</h3>
-                                <p class="mt-2 text-base text-purple-200">{{ feature.description }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Alternating Feature Sections -->
 
-            <!-- Stats section -->
-            <div class="relative bg-gray-900">
-                <div class="absolute inset-x-0 bottom-0 h-80 xl:top-0 xl:h-full">
-                    <div class="h-full w-full xl:grid xl:grid-cols-2">
-                        <div class="h-full xl:relative xl:col-start-2">
-                            <img class="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
-                                 src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                                 alt="People working on laptops"/>
-                            <div aria-hidden="true"
-                                 class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-900 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"/>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="mx-auto max-w-4xl px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-flow-col-dense xl:grid-cols-2 xl:gap-x-8">
-                    <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-                        <h2 class="text-base font-semibold">
-                            <span class="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">Valuable Metrics</span>
-                        </h2>
-                        <p class="mt-3 text-3xl font-bold tracking-tight text-white">Get actionable data that will help
-                            grow your business</p>
-                        <p class="mt-5 text-lg text-gray-300">Rhoncus sagittis risus arcu erat lectus bibendum. Ut in
-                            adipiscing quis in viverra tristique sem. Ornare feugiat viverra eleifend fusce orci in quis
-                            amet. Sit in et vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu
-                            vulputate diam sit tellus quis at.</p>
-                        <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
-                            <p v-for="item in metrics" :key="item.id">
-                                <span class="block text-2xl font-bold text-white">{{ item.stat }}</span>
-                                <span class="mt-1 block text-base text-gray-300"
-                                ><span class="font-medium text-white">{{ item.emphasis }}</span> {{ item.rest }}</span
-                                >
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Gradient Feature Section -->
 
-            <!-- CTA Section -->
-            <div class="bg-white">
-                <div
-                    class="mx-auto max-w-4xl py-16 px-6 sm:py-24 lg:flex lg:max-w-7xl lg:items-center lg:justify-between lg:px-8">
-                    <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        <span class="block">Ready to get started?</span>
-                        <span
-                            class="-mb-1 block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text pb-1 text-transparent">Get in touch or create an account.</span>
-                    </h2>
-                    <div class="mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-5">
-                        <a href="#"
-                           class="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Learn
-                            more</a>
-                        <a href="#"
-                           class="flex items-center justify-center rounded-md border border-transparent bg-indigo-50 px-4 py-3 text-base font-medium text-indigo-800 shadow-sm hover:bg-indigo-100">Get
-                            started</a>
+        <!-- Stats section -->
+        <div class="relative bg-[#dbdbdb] h-screen">
+            <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+                <img class="h-full w-full object-cover"
+                     :src="YourAdvantagePenImage"
+                     alt=""/>
+            </div>
+            <div class="relative mx-auto max-w-md py-12 px-6 sm:max-w-7xl sm:py-20 md:py-28 lg:px-8 lg:py-32">
+                <div class="md:ml-auto md:w-1/2 md:pl-10 ">
+                    <h2 class="mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl">Your Advantage</h2>
+                    <p class="mt-3 text-lg text-black">The AW-Advantage team bring you a host of skills to supercharge
+                        your retail business. Use our modular approach - buy just the services you need - but as you add
+                        modules they will work holistically. EG. your PPC guy will meet with your Social Media and make
+                        a complimentary plan - mutipling results. AW-Advantage - team work. The AW-Advatage team is
+                        rewarded and motivated by improving your business - helping you grow and succeed is our
+                        reward.</p>
+                    <div class="mt-8">
+                        <div class="inline-flex rounded-md shadow">
+                            <a href="#"
+                               class="inline-flex items-center justify-center rounded-full border border-transparent bg-black px-5 py-3 text-base font-medium text-white">
+                                Visit the help center
+                                <ArrowTopRightOnSquareIcon class="-mr-1 ml-3 h-5 w-5 text-gray-400" aria-hidden="true"/>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+        <!-- CTA Section -->
+        <div class="bg-white">
+            <div
+                class="mx-auto max-w-4xl py-16 px-6 sm:py-24 lg:flex lg:max-w-7xl lg:items-center lg:justify-between lg:px-8">
+                <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    <span class="block">Ready to get started?</span>
+                    <span
+                        class="-mb-1 block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text pb-1 text-transparent">Get in touch or create an account.</span>
+                </h2>
+                <div class="mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-5">
+                    <a href="#"
+                       class="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Learn
+                        more</a>
+                    <a href="#"
+                       class="flex items-center justify-center rounded-md border border-transparent bg-indigo-50 px-4 py-3 text-base font-medium text-indigo-800 shadow-sm hover:bg-indigo-100">Get
+                        started</a>
+                </div>
+            </div>
+        </div>
+    </main>
 
-        <footer class="bg-gray-50" aria-labelledby="footer-heading">
-            <h2 id="footer-heading" class="sr-only">Footer</h2>
-            <div class="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:px-8 lg:pt-24">
-                <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                    <div class="grid grid-cols-2 gap-8 xl:col-span-2">
-                        <div class="md:grid md:grid-cols-2 md:gap-8">
-                            <div>
-                                <h3 class="text-base font-medium text-gray-900">Solutions</h3>
-                                <ul role="list" class="mt-4 space-y-4">
-                                    <li v-for="item in footerNavigation.solutions" :key="item.name">
-                                        <a :href="item.href"
-                                           class="text-base text-gray-500 hover:text-gray-900">{{ item.name }}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mt-12 md:mt-0">
-                                <h3 class="text-base font-medium text-gray-900">Support</h3>
-                                <ul role="list" class="mt-4 space-y-4">
-                                    <li v-for="item in footerNavigation.support" :key="item.name">
-                                        <a :href="item.href"
-                                           class="text-base text-gray-500 hover:text-gray-900">{{ item.name }}</a>
-                                    </li>
-                                </ul>
-                            </div>
+    <footer class="bg-gray-50" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:px-8 lg:pt-24">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-base font-medium text-gray-900">Solutions</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li v-for="item in footerNavigation.solutions" :key="item.name">
+                                    <a :href="item.href"
+                                       class="text-base text-gray-500 hover:text-gray-900">{{ item.name }}</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="md:grid md:grid-cols-2 md:gap-8">
-                            <div>
-                                <h3 class="text-base font-medium text-gray-900">Company</h3>
-                                <ul role="list" class="mt-4 space-y-4">
-                                    <li v-for="item in footerNavigation.company" :key="item.name">
-                                        <a :href="item.href"
-                                           class="text-base text-gray-500 hover:text-gray-900">{{ item.name }}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mt-12 md:mt-0">
-                                <h3 class="text-base font-medium text-gray-900">Legal</h3>
-                                <ul role="list" class="mt-4 space-y-4">
-                                    <li v-for="item in footerNavigation.legal" :key="item.name">
-                                        <a :href="item.href"
-                                           class="text-base text-gray-500 hover:text-gray-900">{{ item.name }}</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-base font-medium text-gray-900">Support</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li v-for="item in footerNavigation.support" :key="item.name">
+                                    <a :href="item.href"
+                                       class="text-base text-gray-500 hover:text-gray-900">{{ item.name }}</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="mt-12 xl:mt-0">
-                        <h3 class="text-base font-medium text-gray-900">Subscribe to our newsletter</h3>
-                        <p class="mt-4 text-base text-gray-500">The latest news, articles, and resources, sent to your
-                            inbox weekly.</p>
-                        <form class="mt-4 sm:flex sm:max-w-md">
-                            <label for="email-address" class="sr-only">Email address</label>
-                            <input type="email" name="email-address" id="email-address" autocomplete="email" required=""
-                                   class="w-full min-w-0 appearance-none rounded-md border border-gray-300 bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-indigo-500"
-                                   placeholder="Enter your email"/>
-                            <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                                <button type="submit"
-                                        class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">
-                                    Subscribe
-                                </button>
-                            </div>
-                        </form>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-base font-medium text-gray-900">Company</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li v-for="item in footerNavigation.company" :key="item.name">
+                                    <a :href="item.href"
+                                       class="text-base text-gray-500 hover:text-gray-900">{{ item.name }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-base font-medium text-gray-900">Legal</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li v-for="item in footerNavigation.legal" :key="item.name">
+                                    <a :href="item.href"
+                                       class="text-base text-gray-500 hover:text-gray-900">{{ item.name }}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
-                    <div class="flex space-x-6 md:order-2">
-                        <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href"
-                           class="text-gray-400 hover:text-gray-500">
-                            <span class="sr-only">{{ item.name }}</span>
-                            <component :is="item.icon" class="h-6 w-6" aria-hidden="true"/>
-                        </a>
-                    </div>
-                    <p class="mt-8 text-base text-gray-400 md:order-1 md:mt-0">&copy; 2020 Your Company, Inc. All rights
-                        reserved.</p>
+                <div class="mt-12 xl:mt-0">
+                    <h3 class="text-base font-medium text-gray-900">Subscribe to our newsletter</h3>
+                    <p class="mt-4 text-base text-gray-500">The latest news, articles, and resources, sent to your
+                        inbox weekly.</p>
+                    <form class="mt-4 sm:flex sm:max-w-md">
+                        <label for="email-address" class="sr-only">Email address</label>
+                        <input type="email" name="email-address" id="email-address" autocomplete="email" required=""
+                               class="w-full min-w-0 appearance-none rounded-md border border-gray-300 bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-indigo-500"
+                               placeholder="Enter your email"/>
+                        <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                            <button type="submit"
+                                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </footer>
+            <div class="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
+                <div class="flex space-x-6 md:order-2">
+                    <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href"
+                       class="text-gray-400 hover:text-gray-500">
+                        <span class="sr-only">{{ item.name }}</span>
+                        <component :is="item.icon" class="h-6 w-6" aria-hidden="true"/>
+                    </a>
+                </div>
+                <p class="mt-8 text-base text-gray-400 md:order-1 md:mt-0">&copy; 2020 Your Company, Inc. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
 </template>
 
