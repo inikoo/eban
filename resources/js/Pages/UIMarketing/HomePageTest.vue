@@ -22,7 +22,9 @@ import LogoImage from "@/../../public/Images/AWAdvantageLogo.png";
 import OurServicePlantImage from "@/../../public/Images/OurServicesPlant.png";
 import OurServicePenImage from "@/../../public/Images/OurServicesPen.png";
 import {useLayoutStore} from "@/Stores/layout";
+import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
 
+defineProps(['faqsData'])
 
 const solutions = [
     {
@@ -205,7 +207,7 @@ const theme = useLayoutStore().theme
             class="bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')]  w-full h-[50rem] bg-auto bg-repeat-round	">
             <Popover class=" mx-auto  ">
                 <div
-                    class=" flex max-w-8xl w-full mb-12  ml-5  items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
+                    class=" flex max-w-8xl  mb-12  ml-5  items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
                     <PopoverGroup as="nav" class="hidden space-x-10 md:flex  ml-5">
                         <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
                         <Popover class="relative" v-slot="{ open }">
@@ -330,24 +332,23 @@ const theme = useLayoutStore().theme
                     <div class="mx-auto max-w-7xl py-24 text-black sm:px-6 sm:py-32 lg:px-8">
                         <div class="px-6 py-24 text-center sm:rounded-3xl sm:px-16">
                             <h2
-                                class="mx-auto max-w-2xl text-4xl font-bold tracking-widest font-light">
+                                class="mx-auto max-w-2xl text-6xl font-bold tracking-widest font-light capitalize">
                                 <span class="text-green-500">
                                     Your
                                 </span>
                                 <span class="text-slate-700">
                                     Digital
                                 </span>
-                                <span class="text-yellow-300">
+                                <span class="text-yellow-300 ">
                                     Guru
                                 </span>
                             </h2>
-                            <p class="mx-auto mt-6 max-w-xl text-lg leading-8 ">Incididunt sint fugiat pariatur
+                            <p class="mx-auto mt-6 max-w-xl text-lg leading-6 font-light tracking-wider antialiased">Incididunt sint fugiat pariatur
                                 cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do
                                 ea.</p>
                             <div class="mt-10 flex items-center justify-center gap-x-6">
                                 <a href="#"
-                                   class="rounded-md bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get
-                                    started</a>
+                                   class="rounded-full text-red-60 bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm tracking-wide">Learn More</a>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
                                  class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
@@ -371,17 +372,15 @@ const theme = useLayoutStore().theme
         <main>
             <!-- Hero section -->
             <div class="bg-white">
-                <div class="flex justify-evenly  h-[39rem] mt-6">
+                <div class="flex justify-around  h-[44rem] mt-6 min-w-max">
                     <div class="">
-                        <img class="object-cover" :src='OurServicePlantImage' alt=""/>
+                        <img class="object-cover rounded-3xl" :src='OurServicePlantImage' alt=""/>
                     </div>
                     <div>
-                        <div class="">
-                            <p>Hello</p>
-                        </div>
+                        <FAQ :data="faqsData"></FAQ>
                     </div>
                     <div class="">
-                        <img class="object-cover" :src='OurServicePenImage' alt=""/>
+                        <img class="object-cover rounded-3xl" :src='OurServicePenImage' alt=""/>
                     </div>
                 </div>
             </div>
