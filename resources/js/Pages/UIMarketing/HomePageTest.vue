@@ -1,20 +1,14 @@
 <script setup>
-import {Popover, PopoverButton, PopoverGroup, PopoverPanel} from '@headlessui/vue'
 import {
-    Bars3Icon,
     ChatBubbleBottomCenterTextIcon,
     ChatBubbleLeftRightIcon,
     InboxIcon,
     QuestionMarkCircleIcon,
-    XMarkIcon,
 } from '@heroicons/vue/24/outline'
-import {ChevronDownIcon} from '@heroicons/vue/20/solid'
 import {useLayoutStore} from "@/Stores/layout";
 
-import Footer from "@/Components/Footer.vue";
 import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
 
-import LogoImage from "@/../../public/Images/AWAdvantageLogo.png";
 import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.png";
 import ContactUsGreenStuff from "@/../../public/Images/ContactUsGreenStuff.png";
 
@@ -56,97 +50,11 @@ const theme = useLayoutStore().theme
 
 </script>
 
-<template>
-    <div class="bg-white ">
-        <header
-            class="bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')]  w-full h-[50rem] bg-auto bg-repeat-round	">
-            <Popover class=" mx-auto  ">
-                <div
-                    class=" flex max-w-8xl  mb-12  ml-5  items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
-                    <PopoverGroup as="nav" class="hidden space-x-10 md:flex  ml-5">
-                        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
-                        <Popover class="relative" v-slot="{ open }">
-                            <PopoverButton
+<template layout="UIMarketingLayout">
+    <div class="bg-white bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')]  w-full h-[50rem] bg-auto bg-repeat-round">
+        <header class="">
 
-                                :class="[open ? 'text-gray-900' : 'text-gray-500', 'group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2']">
-                                <span>Services</span>
-                                <ChevronDownIcon
-                                    :class="[open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-gray-500']"
-                                    aria-hidden="true"/>
-                            </PopoverButton>
-
-                            <transition enter-active-class="transition ease-out duration-200"
-                                        enter-from-class="opacity-0 translate-y-1"
-                                        enter-to-class="opacity-100 translate-y-0"
-                                        leave-active-class="transition ease-in duration-150"
-                                        leave-from-class="opacity-100 translate-y-0"
-                                        leave-to-class="opacity-0 translate-y-1">
-
-                            </transition>
-                        </Popover>
-                        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">About</a>
-                        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</a>
-                    </PopoverGroup>
-                    <div class="flex  justify-end lg:w-0 lg:flex-1">
-                        <a href="#">
-                            <!-- <span class="sr-only">Your Company</span> -->
-                            <img class="object-cover" width="350" height="350" :src='LogoImage' alt=""/>
-                        </a>
-                    </div>
-                    <div class="-my-2 mr-7 md:hidden">
-                        <PopoverButton
-                            class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                            <span class="sr-only">Open menu</span>
-                            <Bars3Icon class="h-6 w-6" aria-hidden="true"/>
-                        </PopoverButton>
-                    </div>
-                    <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 pr-5">
-                        <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign
-                            in</a>
-                        <a href="#"
-                           class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border px-4 py-2 text-base font-medium text-black shadow-sm hover:from-green-600 hover:to-yellow-400">Sign
-                            up</a>
-                    </div>
-                </div>
-                <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95"
-                            enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in"
-                            leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
-                    <PopoverPanel focus
-                                  class="absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition md:hidden">
-                        <div
-                            class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                            <div class="px-5 pt-5 pb-6">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <img class="h-8 w-auto"
-                                             src="https://tailwindui.com/img/logos/mark.svg?from-color=purple&from-shade=600&to-color=indigo&to-shade=600&toShade=600"
-                                             alt="Your Company"/>
-                                    </div>
-                                    <div class="-mr-2">
-                                        <PopoverButton
-                                            class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                                            <span class="sr-only">Close menu</span>
-                                            <XMarkIcon class="h-6 w-6" aria-hidden="true"/>
-                                        </PopoverButton>
-                                    </div>
-                                </div>
-                                <div class="mt-6">
-                                    <nav class="grid grid-cols-1 gap-7 ">
-                                        <a v-for="item in solutions" :key="item.name" :href="item.href"
-                                           class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
-                                            <div
-                                                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border text-black hover:from-green-600 hover:to-yellow-300">
-                                                <component :is="item.icon" class="h-6 w-6" aria-hidden="true"/>
-                                            </div>
-                                            <div class="ml-4 text-base font-medium text-gray-900">{{ item.name }}</div>
-                                        </a>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </PopoverPanel>
-                </transition>
-                <div class="-mt-32">
+                <div class="-mt-48">
                     <div class="mx-auto max-w-7xl py-24 text-black sm:px-6 sm:py-32 lg:px-8">
                         <div class="px-6 py-24 text-center sm:rounded-3xl sm:px-16">
                             <h2
@@ -176,7 +84,6 @@ const theme = useLayoutStore().theme
                         </div>
                     </div>
                 </div>
-            </Popover>
         </header>
     </div>
 
@@ -353,9 +260,6 @@ const theme = useLayoutStore().theme
     </main>
 
     <!-- Footer -->
-
-    <Footer></Footer>
-
 
 </template>
 
