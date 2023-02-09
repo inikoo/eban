@@ -1,29 +1,25 @@
 <script setup>
 import {Popover, PopoverButton, PopoverGroup, PopoverPanel} from '@headlessui/vue'
 import {
-    ArrowUturnLeftIcon,
     Bars3Icon,
     ChatBubbleBottomCenterTextIcon,
-    ChatBubbleLeftEllipsisIcon,
     ChatBubbleLeftRightIcon,
-    DocumentChartBarIcon,
-    HeartIcon,
     InboxIcon,
-    PencilSquareIcon,
     QuestionMarkCircleIcon,
-    TrashIcon,
-    UsersIcon,
     XMarkIcon,
 } from '@heroicons/vue/24/outline'
 import {ChevronDownIcon} from '@heroicons/vue/20/solid'
-import LogoImage from "@/../../public/Images/AWAdvantageLogo.png";
 import {useLayoutStore} from "@/Stores/layout";
+
+import Footer from "@/Components/Footer.vue";
 import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
+
+import LogoImage from "@/../../public/Images/AWAdvantageLogo.png";
 import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.png";
 import ContactUsGreenStuff from "@/../../public/Images/ContactUsGreenStuff.png";
+
 import {ref} from 'vue'
 import {Switch} from '@headlessui/vue'
-import Footer from "@/Components/Footer.vue";
 
 
 defineProps(['faqsData'])
@@ -53,54 +49,6 @@ const solutions = [
         href: '#',
         icon: QuestionMarkCircleIcon,
     },
-]
-const features = [
-    {
-        name: 'Unlimited Inboxes',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: InboxIcon,
-    },
-    {
-        name: 'Manage Team Members',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: UsersIcon,
-    },
-    {
-        name: 'Spam Report',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: TrashIcon,
-    },
-    {
-        name: 'Compose in Markdown',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: PencilSquareIcon,
-    },
-    {
-        name: 'Team Reporting',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: DocumentChartBarIcon,
-    },
-    {
-        name: 'Saved Replies',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: ArrowUturnLeftIcon,
-    },
-    {
-        name: 'Email Commenting',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: ChatBubbleLeftEllipsisIcon,
-    },
-    {
-        name: 'Connect with Customers',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: HeartIcon,
-    },
-]
-const metrics = [
-    {id: 1, stat: '8K+', emphasis: 'Companies', rest: 'use laoreet amet lacus nibh integer quis.'},
-    {id: 2, stat: '25K+', emphasis: 'Countries around the globe', rest: 'lacus nibh integer quis.'},
-    {id: 3, stat: '98%', emphasis: 'Customer satisfaction', rest: 'laoreet amet lacus nibh integer quis.'},
-    {id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.'},
 ]
 const agreed = ref(false)
 
@@ -133,25 +81,7 @@ const theme = useLayoutStore().theme
                                         leave-active-class="transition ease-in duration-150"
                                         leave-from-class="opacity-100 translate-y-0"
                                         leave-to-class="opacity-0 translate-y-1">
-                                <PopoverPanel
-                                    class="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform lg:left-1/2 lg:ml-10 lg:max-w-2xl lg:-translate-x-1/3">
-                                    <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                        <div
-                                            class="relative grid gap-6 bg-white px-5 ml-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                                            <a v-for="item in solutions" :key="item.name" :href="item.href"
-                                               class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-                                                <div
-                                                    class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
-                                                    <component :is="item.icon" class="h-6 w-6" aria-hidden="true"/>
-                                                </div>
-                                                <div class="ml-4">
-                                                    <p class="text-base font-medium text-gray-900">{{ item.name }}</p>
-                                                    <p class="mt-1 text-sm text-gray-500">{{ item.description }}</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </PopoverPanel>
+
                             </transition>
                         </Popover>
                         <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">About</a>
@@ -174,7 +104,7 @@ const theme = useLayoutStore().theme
                         <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign
                             in</a>
                         <a href="#"
-                           class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Sign
+                           class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border px-4 py-2 text-base font-medium text-black shadow-sm hover:from-green-600 hover:to-yellow-400">Sign
                             up</a>
                     </div>
                 </div>
@@ -201,35 +131,16 @@ const theme = useLayoutStore().theme
                                     </div>
                                 </div>
                                 <div class="mt-6">
-                                    <nav class="grid grid-cols-1 gap-7">
+                                    <nav class="grid grid-cols-1 gap-7 ">
                                         <a v-for="item in solutions" :key="item.name" :href="item.href"
                                            class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
                                             <div
-                                                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                                                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border text-black hover:from-green-600 hover:to-yellow-300">
                                                 <component :is="item.icon" class="h-6 w-6" aria-hidden="true"/>
                                             </div>
                                             <div class="ml-4 text-base font-medium text-gray-900">{{ item.name }}</div>
                                         </a>
                                     </nav>
-                                </div>
-                            </div>
-                            <div class="py-6 px-5">
-                                <div class="grid grid-cols-2 gap-4">
-                                    <a href="#"
-                                       class="text-base font-medium text-gray-900 hover:text-gray-700">Pricing</a>
-                                    <a href="#"
-                                       class="text-base font-medium text-gray-900 hover:text-gray-700">Partners</a>
-                                    <a href="#"
-                                       class="text-base font-medium text-gray-900 hover:text-gray-700">Company</a>
-                                </div>
-                                <div class="mt-6">
-                                    <a href="#"
-                                       class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Sign
-                                        up</a>
-                                    <p class="mt-6 text-center text-base font-medium text-gray-500">
-                                        Existing customer?
-                                        <a href="#" class="text-gray-900">Sign in</a>
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +170,7 @@ const theme = useLayoutStore().theme
                             </p>
                             <div class="mt-10 flex items-center justify-center gap-x-6">
                                 <a href="#"
-                                   class="rounded-full text-red-60 bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm tracking-wide">Learn
+                                   class="rounded-full   px-3.5 py-1.5 text-base font-semibold leading-7 text-black  tracking-wide   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border hover:from-green-600 hover:to-yellow-400">Learn
                                     More</a>
                             </div>
                         </div>
@@ -342,7 +253,8 @@ const theme = useLayoutStore().theme
                                 <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"/>
                             </svg>
                             <div class="text-center">
-                                <h2 class="text-6xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">Contact Us</h2>
+                                <h2 class="text-6xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
+                                    Contact Us</h2>
                             </div>
                             <div class="mt-12">
                                 <form action="#" method="POST"
