@@ -4,7 +4,7 @@
   - Copyright (c) 2023, Inikoo Ltd
   -->
 <script setup>
-import {Popover, PopoverButton, PopoverPanel} from '@headlessui/vue';
+import {Popover, PopoverButton, PopoverPanel, PopoverGroup} from '@headlessui/vue';
 import {ChevronDownIcon} from '@heroicons/vue/20/solid'
 import LogoImage from "@/../../public/Images/AWAdvantageLogo.png";
 
@@ -83,13 +83,22 @@ const solutions = [
                                 aria-hidden="true"/>
                         </PopoverButton>
 
-                        <transition enter-active-class="transition ease-out duration-200"
-                                    enter-from-class="opacity-0 translate-y-1"
-                                    enter-to-class="opacity-100 translate-y-0"
-                                    leave-active-class="transition ease-in duration-150"
-                                    leave-from-class="opacity-100 translate-y-0"
-                                    leave-to-class="opacity-0 translate-y-1">
-
+                        <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
+                            <PopoverPanel class="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform lg:left-1/2 lg:ml-44 lg:max-w-2xl lg:-translate-x-1/2">
+                                <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                    <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                                        <a v-for="item in solutions" :key="item.name" :href="item.href" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                                            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
+                                                <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
+                                            </div>
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">{{ item.name }}</p>
+                                                <p class="mt-1 text-sm text-gray-500">{{ item.description }}</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </PopoverPanel>
                         </transition>
                     </Popover>
                     <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">About</a>
