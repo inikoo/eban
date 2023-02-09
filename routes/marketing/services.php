@@ -10,10 +10,10 @@ use App\Actions\UI\Guest\DisplayBanners;
 use App\Actions\UI\Guest\DisplayEmailMarketing;
 use App\Actions\UI\Guest\DisplaySeo;
 use Illuminate\Support\Facades\Route;
-use App\Actions\UI\Guest\DisplayProducts;
+use App\Actions\UI\Guest\DisplayServices;
 
 
-Route::get('/', DisplayProducts::class)->name('index');
+Route::get('/', DisplayServices::class)->name('index');
 
 Route::get('/adwords', DisplayAdwords::class)->name('adwords');
 

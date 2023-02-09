@@ -11,7 +11,7 @@ use Inertia\Inertia;
 use Inertia\Response;
 use Lorisleiva\Actions\Concerns\AsController;
 
-class DisplayProducts
+class DisplayServices
 {
     use AsController;
 
@@ -46,7 +46,7 @@ class DisplayProducts
             ]
         ];
 
-        return Inertia::render('UIMarketing/Products', $data);
+        return Inertia::render('UIMarketing/Services', $data);
     }
 }
 

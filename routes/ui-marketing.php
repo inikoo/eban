@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', DisplayHome::class)->name('home');
 
 
-Route::prefix('products')->name('products.')->group(function () {
-    require __DIR__."/marketing/products.php";
+Route::prefix('services')->name('products.')->group(function () {
+    require __DIR__ . "/marketing/services.php";
 });
 
 Route::get('/features', DisplayFeatures::class)->name('features');

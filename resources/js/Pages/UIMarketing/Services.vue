@@ -1,7 +1,5 @@
 <script setup>
 
-import CTA from "@/Components/UIMarketing/Sections/CTA.vue";
-import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
 import { ChevronRightIcon } from '@heroicons/vue/20/solid'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/vue/20/solid'
 import { CheckIcon, MinusIcon } from '@heroicons/vue/20/solid'
