@@ -1,4 +1,4 @@
-<template>
+<template layout="UIMarketingLayout">
     <div class="bg-white">
         <header class="relative bg-blue-gray-800 pb-36">
             <div class="absolute inset-0">
