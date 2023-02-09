@@ -60,17 +60,23 @@ const layout = initialiseApp();
 const solutions = [
     {
         name: 'Ads',
+        description: 'Hello',
         route: 'ui-marketing.products.adwords',
         icon: ChartBarIcon,
     },
     {
         name: 'Seo',
+        description: 'Hello',
         route: 'ui-marketing.products.seo',
         icon: CursorArrowRaysIcon,
     },
-    {name: 'Email Marketing', route: 'ui-marketing.products.emailmarketing', icon: ShieldCheckIcon},
+    {   name: 'Email Marketing',
+        description: 'Hello',
+        route: 'ui-marketing.products.emailmarketing',
+        icon: ShieldCheckIcon},
     {
         name: 'Bannersnack',
+        description: 'Hello',
         route: 'ui-marketing.products.banners',
         icon: Squares2X2Icon,
     }
@@ -101,11 +107,11 @@ const solutions = [
                                 <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                     <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                                         <Link v-for="item in solutions" :key="item.name" :href="route(item.route)" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-                                            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
+                                            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border text-black sm:h-12 sm:w-12 hover:from-green-600 hover:to-yellow-400">
                                                 <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                                             </div>
                                             <div class="ml-4">
-                                                <p class="text-base font-medium text-gray-900">{{ item.name }}</p>
+                                                <p class="text-base font-medium text-gray-900 ">{{ item.name }}</p>
                                                 <p class="mt-1 text-sm text-gray-500">{{ item.description }}</p>
                                             </div>
                                         </Link>
