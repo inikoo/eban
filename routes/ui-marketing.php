@@ -9,8 +9,8 @@ use App\Actions\UI\Guest\DisplayAbout;
 use App\Actions\UI\Guest\DisplayCompany;
 use App\Actions\UI\Guest\DisplayContact;
 use App\Actions\UI\Guest\DisplayFeatures;
+use App\Actions\UI\Guest\DisplayHomePageTestTwo;
 use App\Actions\UI\Guest\DisplayHome;
-use App\Actions\UI\Guest\DisplayHomePageTest;
 use App\Actions\UI\Guest\DisplayMarketing;
 use App\Actions\UI\Guest\DisplayPricingPage;
 use App\Actions\UI\Guest\DisplayPrivacy;
@@ -39,7 +39,7 @@ Route::get('/privacy', DisplayPrivacy::class)->name('privacy');
 
 Route::get('/terms', DisplayTerms::class)->name('terms');
 
-Route::get('/homepagetest', DisplayHomePageTest::class)->name('homespagetest');
+Route::get('/homepagetesttwo', DisplayHomePageTestTwo::class)->name('homepagetesttwo');
 
 Route::get('/contact', DisplayContact::class)->name('contact');
 
