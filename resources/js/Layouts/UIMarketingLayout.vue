@@ -32,7 +32,19 @@ const signUp = [
 
 
 const navigation = [
-    {name: 'Products', route: 'ui-marketing.products.index'},
+    {name: 'Products', route: 'ui-marketing.home'},
+    /*  {name: 'Features', route: 'ui-marketing.features'}, */
+
+];
+
+const aboutLink = [
+    {name: 'Products', route: 'ui-marketing.about'},
+    /*  {name: 'Features', route: 'ui-marketing.features'}, */
+
+];
+
+const contactLink = [
+    {name: 'Products', route: 'ui-marketing.contact'},
     /*  {name: 'Features', route: 'ui-marketing.features'}, */
 
 ];
@@ -73,7 +85,7 @@ const solutions = [
             <div
                 class=" flex max-w-8xl  mb-12  ml-5  items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
                 <PopoverGroup as="nav" class="hidden space-x-10 md:flex  ml-5">
-                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
+                    <Link v-for="item in navigation" :key="item.name" :href="route(item.route)" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</Link>
                     <Popover class="relative" v-slot="{ open }">
                         <PopoverButton
 
@@ -102,8 +114,8 @@ const solutions = [
                             </PopoverPanel>
                         </transition>
                     </Popover>
-                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">About</a>
-                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</a>
+                    <Link v-for="item in aboutLink" :key="item.name" :href="route(item.route)" class="text-base font-medium text-gray-500 hover:text-gray-900">About</Link>
+                    <Link v-for="item in contactLink" :key="item.name" :href="route(item.route)" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</Link>
                 </PopoverGroup>
                 <div class="flex  justify-end lg:w-0 lg:flex-1">
                     <a href="#">
@@ -119,11 +131,11 @@ const solutions = [
                     </PopoverButton>
                 </div>
                 <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 pr-5">
-                    <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign
-                        in</a>
-                    <a href="#"
+                    <Link v-for="item in logIn" :key="item.name" :href="route(item.route)" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign
+                        in</Link>
+                    <Link v-for="item in signUp" :key="item.name" :href="route(item.route)"
                        class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border px-4 py-2 text-base font-medium text-black shadow-sm hover:from-green-600 hover:to-yellow-400">Sign
-                        up</a>
+                        up</Link>
                 </div>
             </div>
             <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95"
