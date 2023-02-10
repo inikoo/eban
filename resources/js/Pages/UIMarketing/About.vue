@@ -6,12 +6,40 @@ import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.p
 
 <template layout="UIMarketingLayout">
 
-    <div class="relative bg-[#dbdbdb] h-screen">
-        <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+    <div class=" bg-[#dbdbdb] h-screen md:flex lg:flex  lg:px-3">
+        <div class="relative h-56 bg-indigo-600 sm:h-72  md:left-0 md:h-full md:w-1/2 lg:w-1/2 xl:w-1/2">
             <img class="h-full w-full object-cover"
                  :src="YourAdvantagePenImage"
                  alt=""/>
         </div>
+        <div class="text-center mt-10 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+            <h2>
+                Who We Are
+            </h2>
+            <p>
+                Get the AW advantage of over twenty years of experience working with Pay-Per-Click, email marketing and
+                SEO. At AW we have pioneered many successful techniques over many years - now you can put them to use in
+                your business. Now utilizing the brightest and best university graduates partnered with European
+                experts.
+            </p>
+            <p>
+                The AW-Advantage team bring you a host of skills to supercharge your retail business. Use our modular
+                approach - buy just the services you need - but as you add modules they will work holistically. EG. your
+                PPC guy will meet with your Social Media and make a complimentary plan - mutipling results. AW-Advantage
+                - team work. The AW-Advatage team is rewarded and motivated by improving your business - helping you
+                grow and succeed is our reward.
+
+                Get the AW-Advantage with your account manager based in the UK or Europe and your team of young
+                motivated people working from our state of the art offices in Denpasar, Indonesia. Access to all types
+                of experts - including Design, PPC, Email Marketing, Social Media and more. AW-Advantage - best of both
+                worlds.
+
+                Get the AW-Advantage with comprehensive monthly reports. Authentic, simple and honest. We promise not to
+                blind you with complexity, or employ dodgy technics to make your results look better. AW-Advantage -
+                Authentic and Honest.
+            </p>
+        </div>
+
     </div>
 
     <!--         <div class="relative mx-auto max-w-md py-12 px-6 sm:max-w-7xl sm:py-20 md:py-28 lg:px-8 lg:py-32">
