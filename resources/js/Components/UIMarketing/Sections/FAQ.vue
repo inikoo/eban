@@ -12,7 +12,7 @@ defineProps(['data'])
 </script>
 
 <template>
-    <div class="bg-white">
+    <div class="bg-white ">
         <div class="py-12 px-6 sm:py-16 lg:px-3 flex justify-around ">
             <div class="hidden lg:block">
                 <img :src='OurServicePlantImage' class="rounded-3xl" alt="ServicePlant Image">
