@@ -91,7 +91,7 @@ const solutions = [
             <div
                 class=" flex max-w-8xl  mb-12  ml-5  items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
                 <PopoverGroup as="nav" class="hidden space-x-10 md:flex  ml-5">
-                    <Link v-for="item in navigation" :key="item.name" :href="route(item.route)" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</Link>
+                    <Link v-for="item in navigation" :key="item.name" :href="route(item.route)" class="text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">Home</Link>
                     <Popover class="relative" v-slot="{ open }">
                         <PopoverButton
 
@@ -120,8 +120,8 @@ const solutions = [
                             </PopoverPanel>
                         </transition>
                     </Popover>
-                    <Link v-for="item in aboutLink" :key="item.name" :href="route(item.route)" class="text-base font-medium text-gray-500 hover:text-gray-900">About</Link>
-                    <Link v-for="item in contactLink" :key="item.name" :href="route(item.route)" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</Link>
+                    <Link v-for="item in aboutLink" :key="item.name" :href="route(item.route)" class=" text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">About</Link>
+                    <Link v-for="item in contactLink" :key="item.name" :href="route(item.route)" class=" text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">Contact</Link>
                 </PopoverGroup>
                 <div class="flex  justify-end lg:w-0 lg:flex-1">
                     <a href="#">
