@@ -6,22 +6,24 @@ import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.p
 
 <template layout="UIMarketingLayout">
 
-    <div class=" bg-[#dbdbdb] h-screen md:flex lg:flex  lg:px-3">
+    <div class=" bg-white  h-auto md:h-screen lg:h-screen xl:h-screen md:flex lg:flex  lg:px-3">
         <div class="relative h-56 bg-indigo-600 sm:h-72  md:left-0 md:h-full md:w-1/2 lg:w-1/2 xl:w-1/2">
             <img class="h-full w-full object-cover"
                  :src="YourAdvantagePenImage"
                  alt=""/>
         </div>
-        <div class="text-center mt-10 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-            <h2>
+        <div class="text-center mt-10 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pl-20 pr-20">
+            <h2 class="font-bold text-6xl">
                 Who We Are
             </h2>
+            <br>
             <p>
                 Get the AW advantage of over twenty years of experience working with Pay-Per-Click, email marketing and
                 SEO. At AW we have pioneered many successful techniques over many years - now you can put them to use in
                 your business. Now utilizing the brightest and best university graduates partnered with European
                 experts.
             </p>
+            <br>
             <p>
                 The AW-Advantage team bring you a host of skills to supercharge your retail business. Use our modular
                 approach - buy just the services you need - but as you add modules they will work holistically. EG. your
@@ -34,9 +36,7 @@ import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.p
                 of experts - including Design, PPC, Email Marketing, Social Media and more. AW-Advantage - best of both
                 worlds.
 
-                Get the AW-Advantage with comprehensive monthly reports. Authentic, simple and honest. We promise not to
-                blind you with complexity, or employ dodgy technics to make your results look better. AW-Advantage -
-                Authentic and Honest.
+
             </p>
         </div>
 
