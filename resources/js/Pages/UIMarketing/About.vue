@@ -1,6 +1,7 @@
 <script setup>
 import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.png";
 
+
 </script>
 
 
