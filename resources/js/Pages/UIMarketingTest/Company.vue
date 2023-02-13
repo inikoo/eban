@@ -1,7 +1,7 @@
 <script setup>
 
 defineProps( ['pricingData']);
-import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
+import Pricing from "@/Components/UIMarketing/SectionsTest/Pricing.vue";
 
 </script>
 

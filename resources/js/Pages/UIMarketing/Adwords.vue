@@ -1,12 +1,12 @@
 <script setup>
 
-import Features from "@/Components/UIMarketing/Sections/Features.vue";
-import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
-import CTA from "@/Components/UIMarketing/Sections/CTA.vue";
-import Pricing from "@/Components/UIMarketing/Sections/Pricing.vue";
-import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
-import Stats from "@/Components/UIMarketing/Sections/Stats.vue";
-import Testimonial from "@/Components/UIMarketing/Sections/Testimonial.vue";
+import Features from "@/Components/UIMarketing/SectionsTest/Features.vue";
+import Hero from "@/Components/UIMarketing/SectionsTest/Hero.vue";
+import CTA from "@/Components/UIMarketing/SectionsTest/CTA.vue";
+import Pricing from "@/Components/UIMarketing/SectionsTest/Pricing.vue";
+import FAQ from "@/Components/UIMarketing/SectionsTest/FAQ.vue";
+import Stats from "@/Components/UIMarketing/SectionsTest/Stats.vue";
+import Testimonial from "@/Components/UIMarketing/SectionsTest/Testimonial.vue";
 
 defineProps(['pricingData', 'ctaData', 'faqsData', 'homeSloganData', 'statsData', 'featuresData', 'testimonialData'])
 

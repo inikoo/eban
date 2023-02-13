@@ -6,8 +6,8 @@ import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.p
 
 <template layout="UIMarketingLayout">
 
-    <div class=" bg-white  h-auto md:h-screen lg:h-screen xl:h-screen md:flex lg:flex">
-        <div class="relative h-56 bg-indigo-600 sm:h-72  md:left-0 md:h-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+    <div class=" bg-white  h-auto  xl:h-screen md:flex lg:flex">
+        <div class="relative h-56 bg-indigo-600 sm:h-72 md:h-auto md:left-0  md:w-1/2 lg:w-1/2 xl:w-1/2">
             <img class="h-full w-full object-cover"
                  :src="YourAdvantagePenImage"
                  alt=""/>

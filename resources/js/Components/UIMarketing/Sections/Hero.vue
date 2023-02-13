@@ -1,32 +1,43 @@
-<script setup>
-
-defineProps(['data'])
-
-import {useLayoutStore} from '@/Stores/layout';
-
-const theme = useLayoutStore().theme
-
-
+<script>
 
 </script>
 
 <template>
-    <div class="sm:text-center lg:text-left">
-        <h1  class="text-4xl font-bold tracking-tight  sm:text-5xl md:text-6xl">
-            <span class="block xl:inline">{{data.title}}</span>
-            {{ ' ' }}
-            <span :class="theme.classes.accentText" class="block xl:inline ">{{data.titleSpan}} </span>
-        </h1>
-        <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">{{data.paragraph}}</p>
-        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
-                <a href="#"
-                   class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg">{{data.buttonLeft}}</a>
+
+    <div class="bg-white bg-[url('@/../../public/Images/HomeHeroPlantImage.jpeg')]  w-full h-[50rem] bg-auto bg-repeat-round">
+        <header class="">
+            <div class="-mt-48">
+                <div class="mx-auto max-w-7xl py-24 text-black sm:px-6 sm:py-32 lg:px-8">
+                    <div class="px-6 py-24 text-center sm:rounded-3xl sm:px-16">
+                        <h2
+                            class="mx-auto max-w-2xl text-6xl font-bold tracking-widest font-light capitalize">
+                                <span class="text-green-500">
+                                    Your
+                                </span>
+                            <span class="text-slate-700">
+                                    Digital
+                                </span>
+                            <span class="text-yellow-300 ">
+                                    Guru
+                                </span>
+                        </h2>
+                        <p class="mx-auto mt-6 max-w-xl text-lg leading-6 font-light tracking-wider antialiased">
+                            Get the AW advantage of specialist retail digital marketing. More attention - our
+                            specialist team in Indonesia will spend many more hours on your account - than any
+                            European agency can provide. When you are sleeping we are working studying yesterday's
+                            results - tweeking, improving getting your best marketing ready for the next day. Awake
+                            to a real advantage everyday.
+                        </p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a href="#"
+                               class="rounded-full   px-3.5 py-1.5 text-base font-semibold leading-7 transition-all text-black  tracking-wide   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border hover:from-green-600 hover:to-yellow-400">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mt-3 sm:mt-0 sm:ml-3">
-                <a href="#"
-                   class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg">{{data.buttonRight}}</a>
-            </div>
-        </div>
+
+        </header>
     </div>
+
 </template>

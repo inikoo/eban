@@ -1,13 +1,9 @@
 <script setup>
-import {
-    ChatBubbleBottomCenterTextIcon,
-    ChatBubbleLeftRightIcon,
-    InboxIcon,
-    QuestionMarkCircleIcon,
-} from '@heroicons/vue/24/outline'
+
 import {useLayoutStore} from "@/Stores/layout";
 
-import FAQ from "@/Components/UIMarketing/Sections/FAQ.vue";
+import FAQ from "@/Components/UIMarketing/SectionsTest/FAQ.vue";
+import Hero from "@/Components/UIMarketing/Sections/Hero.vue";
 
 import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.png";
 import ContactUsGreenStuff from "@/../../public/Images/ContactUsGreenStuff.png";
@@ -127,13 +123,13 @@ const theme = useLayoutStore().theme
 
         <!--  Contact us -->
 
-        <div class="relative bg-white h-screen">
-            <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+        <div class="relative bg-white md:h-screen">
+            <div class="relative h-56 bg-indigo-600 hidden md:block md:absolute md:left-0 md:h-full md:w-1/2">
                 <img class="h-full w-full object-cover"
                      :src="ContactUsGreenStuff"
                      alt=""/>
             </div>
-            <div class="relative mx-auto max-w-md  px-6 sm:max-w-7xl py-10  lg:px-1">
+            <div class="relative mx-auto max-w-md  px-6 sm:max-w-7xl py-10 lg:px-1">
                 <div class="md:ml-auto md:w-1/2 md:pl-10 ">
                     <div class="overflow-hidden bg-white  px-6 lg:px-8 ">
                         <div class="relative mx-auto max-w-xl">

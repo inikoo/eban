@@ -1,8 +1,8 @@
 <script setup>
 import {Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/vue'
 import {ChevronDownIcon} from '@heroicons/vue/24/outline'
-import OurServicePlantImage from "@/../../public/Images/OurServicesPlant.png";
-import OurServicePenImage from "@/../../public/Images/OurServicesPen.png";
+import OurServicePlantImage from "../../../../../public/Images/OurServicesPlant.png";
+import OurServicePenImage from "../../../../../public/Images/OurServicesPen.png";
 
 
 
