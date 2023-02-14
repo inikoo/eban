@@ -137,10 +137,10 @@ const solutions = [
                     </PopoverButton>
                 </div>
                 <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 pr-5">
-                    <Link v-for="item in logIn" :key="item.name" :href="route(item.route)" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign
+                    <Link v-for="item in logIn" :key="item.name" :href="route(item.route)" class="whitespace-nowrap  text-base font-medium text-gray-500 hover:text-gray-900">Sign
                         in</Link>
                     <Link v-for="item in signUp" :key="item.name" :href="route(item.route)"
-                       class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border px-4 py-2 text-base font-medium text-black shadow-sm hover:from-green-600 hover:to-yellow-400">Sign
+                       class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md    bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border px-4 py-2 text-base font-medium text-black shadow-sm hover:from-green-600 hover:to-yellow-400 animate-pulse">Sign
                         up</Link>
                 </div>
             </div>
