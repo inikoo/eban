@@ -5,6 +5,7 @@ import SubscribeNewsletter from "@/Components/UIMarketing/Sections/SubscribeNews
 
 </script>
 
+
 <template layout="UIMarketingLayout">
 
     <ContactInformation></ContactInformation>
