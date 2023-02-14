@@ -1,5 +1,6 @@
 <script setup>
 
+import PrimaryButton from "@/Components/PrimaryButton.vue";
 </script>
 
 <template>
@@ -155,8 +156,8 @@
                 </div>
                 <div class="sm:col-span-2 sm:flex sm:justify-end">
                     <button type="submit"
-                            class="mt-2 inline-flex w-full items-center justify-center rounded-md  border-transparent bg-gradient-to-r from-green-500 to-yellow-300 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto">
-                        Submit
+                            class="mt-2 inline-flex w-full items-center justify-center rounded-md  px-6 py-3 text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto">
+                        <PrimaryButton>Submit</PrimaryButton>
                     </button>
                 </div>
             </form>

@@ -1,5 +1,6 @@
 <script setup>
 import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.png";
+import PrimaryButton from "@/Components/PrimaryButton.vue";
 
 </script>
 
@@ -23,8 +24,8 @@ import YourAdvantagePenImage from "@/../../public/Images/YourAdvantagePenImage.p
                 <div class="mt-8">
                     <div class="inline-flex rounded-md">
                         <a href="#"
-                           class="inline-flex items-center justify-center rounded-full border border-transparent bg-black px-5 py-3 text-base font-medium text-white">
-                            Visit the help center
+                           class="px-5 py-3 text-base">
+                            <PrimaryButton>Visit help center</PrimaryButton>
                             <ArrowTopRightOnSquareIcon class="-mr-1 ml-3 h-5 w-5 text-gray-400" aria-hidden="true"/>
                         </a>
                     </div>

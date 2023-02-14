@@ -20,6 +20,7 @@ import {
 } from '@heroicons/vue/24/outline';
 import {inject} from 'vue';
 import Footer from "@/Components/Footer.vue";
+import PrimaryButton from "@/Components/PrimaryButton.vue";
 
 const logIn = [
     {name: 'Products', route: 'ui-marketing.auth.login'},
@@ -70,10 +71,12 @@ const solutions = [
         route: 'ui-marketing.products.seo',
         icon: CursorArrowRaysIcon,
     },
-    {   name: 'Email Marketing',
+    {
+        name: 'Email Marketing',
         description: 'Hello',
         route: 'ui-marketing.products.emailmarketing',
-        icon: ShieldCheckIcon},
+        icon: ShieldCheckIcon
+    },
     {
         name: 'Bannersnack',
         description: 'Hello',
@@ -91,7 +94,10 @@ const solutions = [
             <div
                 class=" flex max-w-8xl  mb-12  ml-5  items-center justify-between pt-1 md:justify-start md:space-x-10 lg:flex ">
                 <PopoverGroup as="nav" class="hidden space-x-10 md:flex  ml-5">
-                    <Link v-for="item in navigation" :key="item.name" :href="route(item.route)" class="text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">Home</Link>
+                    <Link v-for="item in navigation" :key="item.name" :href="route(item.route)"
+                          class="text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">
+                        Home
+                    </Link>
                     <Popover class="relative" v-slot="{ open }">
                         <PopoverButton
 
@@ -102,13 +108,21 @@ const solutions = [
                                 aria-hidden="true"/>
                         </PopoverButton>
 
-                        <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-                            <PopoverPanel class="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform lg:left-1/2 lg:ml-44 lg:max-w-2xl lg:-translate-x-1/2">
+                        <transition enter-active-class="transition ease-out duration-200"
+                                    enter-from-class="opacity-0 translate-y-1"
+                                    enter-to-class="opacity-100 translate-y-0"
+                                    leave-active-class="transition ease-in duration-150"
+                                    leave-from-class="opacity-100 translate-y-0"
+                                    leave-to-class="opacity-0 translate-y-1">
+                            <PopoverPanel
+                                class="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform lg:left-1/2 lg:ml-44 lg:max-w-2xl lg:-translate-x-1/2">
                                 <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                     <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                                        <Link v-for="item in solutions" :key="item.name" :href="route(item.route)" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-                                            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border text-black sm:h-12 sm:w-12 hover:from-green-600 hover:to-yellow-400">
-                                                <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
+                                        <Link v-for="item in solutions" :key="item.name" :href="route(item.route)"
+                                              class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                                            <div
+                                                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border text-black sm:h-12 sm:w-12 hover:from-green-600 hover:to-yellow-400">
+                                                <component :is="item.icon" class="h-6 w-6" aria-hidden="true"/>
                                             </div>
                                             <div class="ml-4">
                                                 <p class="text-base font-medium text-gray-900 ">{{ item.name }}</p>
@@ -120,8 +134,14 @@ const solutions = [
                             </PopoverPanel>
                         </transition>
                     </Popover>
-                    <Link v-for="item in aboutLink" :key="item.name" :href="route(item.route)" class=" text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">About</Link>
-                    <Link v-for="item in contactLink" :key="item.name" :href="route(item.route)" class=" text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">Contact</Link>
+                    <Link v-for="item in aboutLink" :key="item.name" :href="route(item.route)"
+                          class=" text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">
+                        About
+                    </Link>
+                    <Link v-for="item in contactLink" :key="item.name" :href="route(item.route)"
+                          class=" text-base font-medium text-gray-500 hover:text-gray-900 hover:underline focus:underline">
+                        Contact
+                    </Link>
                 </PopoverGroup>
                 <div class="flex  justify-end lg:w-0 lg:flex-1">
                     <a href="#">
@@ -137,11 +157,13 @@ const solutions = [
                     </PopoverButton>
                 </div>
                 <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 pr-5">
-                    <Link v-for="item in logIn" :key="item.name" :href="route(item.route)" class="whitespace-nowrap  text-base font-medium text-gray-500 hover:text-gray-900">Sign
-                        in</Link>
-                    <Link v-for="item in signUp" :key="item.name" :href="route(item.route)"
-                       class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md    bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border px-4 py-2 text-base font-medium text-black shadow-sm hover:from-green-600 hover:to-yellow-400 animate-pulse">Sign
-                        up</Link>
+                    <Link v-for="item in logIn" :key="item.name" :href="route(item.route)"
+                          class="whitespace-nowrap  text-base font-medium text-gray-500 hover:text-gray-900"> Sign
+                        in
+                    </Link>
+                    <Link v-for="item in signUp" :key="item.name" :href="route(item.route)">
+                        <PrimaryButton>Sign Up</PrimaryButton>
+                    </Link>
                 </div>
             </div>
             <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95"
@@ -169,7 +191,7 @@ const solutions = [
                             <div class="mt-6">
                                 <nav class="grid grid-cols-1 gap-7 ">
                                     <Link v-for="item in solutions" :key="item.name" :href="route(item.route)"
-                                       class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
+                                          class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
                                         <div
                                             class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border text-black hover:from-green-600 hover:to-yellow-300">
                                             <component :is="item.icon" class="h-6 w-6" aria-hidden="true"/>

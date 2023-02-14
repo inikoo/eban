@@ -1,4 +1,5 @@
 <script setup>
+import PrimaryButton from "@/Components/PrimaryButton.vue";
 
 
 </script>
@@ -30,9 +31,9 @@
                             to a real advantage everyday.
                         </p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
-                            <a href="#"
-                               class="rounded-full   px-3.5 py-1.5 text-base font-semibold leading-7 transition-all text-black  tracking-wide   bg-gradient-to-r from-green-500 to-yellow-300 bg-origin-border hover:from-green-600 hover:to-yellow-400">Learn
-                                More</a>
+                            <a href="#">
+                                <PrimaryButton>Learn More</PrimaryButton>
+                            </a>
                         </div>
                     </div>
                 </div>

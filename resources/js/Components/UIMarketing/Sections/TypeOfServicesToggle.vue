@@ -3,6 +3,7 @@ import {Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/vue'
 import {ChevronDownIcon} from '@heroicons/vue/24/outline'
 import OurServicePlantImage from "../../../../../public/Images/OurServicesPlant.png";
 import OurServicePenImage from "../../../../../public/Images/OurServicesPen.png";
+import PrimaryButton from "@/Components/PrimaryButton.vue";
 
 
 
@@ -81,9 +82,8 @@ defineProps(['data'])
                     </Disclosure>
                 </dl>
                 <div class="mt-5 flex items-center justify-center gap-x-6">
-                    <a href="#"
-                       class="rounded-full mt-5 text-red-60 bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm tracking-wide">
-                        Learn More
+                    <a href="#">
+                        <PrimaryButton class="mt-5 mr-5">Learn More</PrimaryButton>
                     </a>
                 </div>
             </div>
