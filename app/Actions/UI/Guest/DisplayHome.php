@@ -54,6 +54,18 @@ class DisplayHome
                     'paragraph' => 'The AW-Advantage team bring you a host of skills to supercharge your retail business. Use our modular approach - buy just the services you need - but as you add modules they will work holistically. EG. your PPC guy will meet with your Social Media and make a complimentary plan - mutipling results. AW-Advantage - team work. The AW-Advatage team is rewarded and motivated by improving your business - helping you grow and succeed is our reward.',
                     'button' => 'Visit our help center'
                 ],
+            ],
+            'contactUsData' => [
+                'title' => 'Contact Us',
+                'form' => [
+                    'name' => 'First name',
+                    'lastName' => 'Last name',
+                    'email' => 'Email',
+                    'phoneNumber' => 'Phone Number',
+                    'message' => 'Message',
+                 ],
+                'privacyPolicy' => 'By selecting this, you agree to the Privacy Policy and Cookie Policy.',
+                'button' => "Let's talk",
             ]
         ];
         return Inertia::render('UIMarketing/Home', $data);

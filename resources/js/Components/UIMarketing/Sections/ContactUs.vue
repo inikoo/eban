@@ -4,6 +4,8 @@ import {ref} from "vue";
 const agreed = ref(false)
 import {Switch} from '@headlessui/vue'
 
+defineProps(['data'])
+
 
 </script>
 
@@ -42,14 +44,13 @@ import {Switch} from '@headlessui/vue'
                         </svg>
                         <div class="text-center">
                             <h2 class="text-6xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
-                                Contact Us</h2>
+                                {{data.title}}</h2>
                         </div>
                         <div class="mt-12">
                             <form action="#" method="POST"
                                   class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                                 <div>
-                                    <label for="first-name" class="block text-sm font-medium text-gray-700">First
-                                        name</label>
+                                    <label for="first-name" class="block text-sm font-medium text-gray-700">{{data.form.name}}</label>
                                     <div class="mt-1">
                                         <input type="text" name="first-name" id="first-name"
                                                autocomplete="given-name"
@@ -57,8 +58,7 @@ import {Switch} from '@headlessui/vue'
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last
-                                        name</label>
+                                    <label for="last-name" class="block text-sm font-medium text-gray-700">{{data.form.lastName}}</label>
                                     <div class="mt-1">
                                         <input type="text" name="last-name" id="last-name"
                                                autocomplete="family-name"
@@ -67,15 +67,14 @@ import {Switch} from '@headlessui/vue'
                                 </div>
 
                                 <div class="sm:col-span-2">
-                                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">{{data.form.email}}</label>
                                     <div class="mt-1">
                                         <input id="email" name="email" type="email" autocomplete="email"
                                                class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"/>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-2">
-                                    <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone
-                                        Number</label>
+                                    <label for="phone-number" class="block text-sm font-medium text-gray-700">{{data.form.phoneNumber}}</label>
                                     <div class="relative mt-1 rounded-md shadow-sm">
                                         <div class="absolute inset-y-0 left-0 flex items-center">
                                             <label for="country" class="sr-only">Country</label>
@@ -93,7 +92,7 @@ import {Switch} from '@headlessui/vue'
                                 </div>
                                 <div class="sm:col-span-2">
                                     <label for="message"
-                                           class="block text-sm font-medium text-gray-700">Message</label>
+                                           class="block text-sm font-medium text-gray-700">{{data.form.message}}</label>
                                     <div class="mt-1">
                                             <textarea id="message" name="message" rows="4"
                                                       class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"/>
@@ -111,23 +110,15 @@ import {Switch} from '@headlessui/vue'
                                         </div>
                                         <div class="ml-3">
                                             <p class="text-base text-gray-500">
-                                                By selecting this, you agree to the
-                                                {{ ' ' }}
-                                                <a href="#" class="font-medium text-gray-700 underline">Privacy
-                                                    Policy</a>
-                                                {{ ' ' }}
-                                                and
-                                                {{ ' ' }}
-                                                <a href="#" class="font-medium text-gray-700 underline">Cookie
-                                                    Policy</a>.
+                                                {{data.privacyPolicy}}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-2">
                                     <button type="submit"
-                                            class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                        Let's talk
+                                            class="inline-flex w-full text-blac items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                        {{data.button}}
                                     </button>
                                 </div>
                             </form>

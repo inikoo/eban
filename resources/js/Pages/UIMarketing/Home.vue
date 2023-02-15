@@ -9,7 +9,7 @@ import ContactUs from "@/Components/UIMarketing/Sections/ContactUs.vue";
 
 
 
-defineProps(['faqsData', 'heroData', 'awExplanationData'])
+defineProps(['faqsData', 'heroData', 'awExplanationData', 'contactUsData'])
 
 
 const theme = useLayoutStore().theme
@@ -28,7 +28,7 @@ const theme = useLayoutStore().theme
     <AwExplanationParagraph :data="awExplanationData"></AwExplanationParagraph>
 
     <!--  Contact us section -->
-    <ContactUs></ContactUs>
+    <ContactUs :data="contactUsData"></ContactUs>
 
     <!-- Footer -->
     <!-- UIMarketingLayout -->
