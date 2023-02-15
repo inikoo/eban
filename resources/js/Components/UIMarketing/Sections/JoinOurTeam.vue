@@ -1,5 +1,7 @@
 <script setup>
 
+defineProps(['data'])
+
 </script>
 
 <template>
@@ -27,7 +29,7 @@
                             <defs>
                                 <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20"
                                          patternUnits="userSpaceOnUse">
-                                    <rect x="0" y="0" width="4" height="4" class="text-white" fill="currentColor"/>
+                                    <rect x="0" y="0" width="4" height="4" class="text-gray-50" fill="currentColor"/>
                                 </pattern>
                             </defs>
                             <rect width="404" height="384" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"/>
@@ -45,12 +47,10 @@
                     </div>
                     <div
                         class="relative mx-auto max-w-md space-y-6 py-12 px-6 sm:max-w-3xl sm:py-16 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0 text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-black " id="join-heading">Join our team</h2>
-                        <p class="text-lg text-black ">Varius facilisi mauris sed sit. Non sed et duis dui leo,
-                            vulputate
-                            id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
+                        <h2 class="text-3xl font-bold tracking-tight text-black " id="join-heading">{{data.title}}</h2>
+                        <p class="text-lg text-black ">{{data.paragraph}}</p>
                         <a class="block w-full rounded-md border border-transparent bg-white py-3 px-5  text-base font-medium text-black shadow-md hover:bg-blue-gray-50 sm:inline-block sm:w-auto"
-                           href="#">Explore open positions</a>
+                           href="#">{{data.button}}</a>
                     </div>
                 </div>
             </div>

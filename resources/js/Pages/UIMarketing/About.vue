@@ -1,12 +1,15 @@
 <script setup>
 import WhoWeAreAwAdvantage from "@/Components/UIMarketing/Sections/WhoWeAreAwAdvantage.vue";
 import JoinOurTeam from "@/Components/UIMarketing/Sections/JoinOurTeam.vue";
+
+defineProps(['sectionData', 'joinOurTeamData'])
+
 </script>
 
 
 <template layout="UIMarketingLayout">
 
-    <WhoWeAreAwAdvantage></WhoWeAreAwAdvantage>
+    <WhoWeAreAwAdvantage :data="sectionData"></WhoWeAreAwAdvantage>
 
     <!--         <div class="relative mx-auto max-w-md py-12 px-6 sm:max-w-7xl sm:py-20 md:py-28 lg:px-8 lg:py-32">
             <div class="md:ml-auto md:w-1/2 md:pl-10 ">
@@ -29,6 +32,6 @@ import JoinOurTeam from "@/Components/UIMarketing/Sections/JoinOurTeam.vue";
             </div>
         </div>
 -->
-    <JoinOurTeam></JoinOurTeam>
+    <JoinOurTeam :data="joinOurTeamData"></JoinOurTeam>
 
 </template>
