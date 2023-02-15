@@ -41,6 +41,20 @@ class DisplayHome
                     ]
                 ]
             ],
+            'heroData' => [
+                'main' => [
+                    'title' => 'Your Digital Guru',
+                    'paragraph' => 'Get the AW advantage of specialist retail digital marketing. More attention - our specialist team in Indonesia will spend many more hours on your account - than any European agency can provide. When you are sleeping we are working studying yesterday results - tweaking, improving getting your best marketing ready for the next day. Awake to a real advantage everyday.',
+                    'button' => 'Learn more'
+                ],
+            ],
+            'awExplanationData' => [
+                'main' => [
+                    'title' => 'YOUR ADVANTAGE',
+                    'paragraph' => 'The AW-Advantage team bring you a host of skills to supercharge your retail business. Use our modular approach - buy just the services you need - but as you add modules they will work holistically. EG. your PPC guy will meet with your Social Media and make a complimentary plan - mutipling results. AW-Advantage - team work. The AW-Advatage team is rewarded and motivated by improving your business - helping you grow and succeed is our reward.',
+                    'button' => 'Visit our help center'
+                ],
+            ]
         ];
         return Inertia::render('UIMarketing/Home', $data);
     }

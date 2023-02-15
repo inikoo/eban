@@ -9,7 +9,7 @@ import ContactUs from "@/Components/UIMarketing/Sections/ContactUs.vue";
 
 
 
-defineProps(['faqsData'])
+defineProps(['faqsData', 'heroData', 'awExplanationData'])
 
 
 const theme = useLayoutStore().theme
@@ -19,13 +19,13 @@ const theme = useLayoutStore().theme
 <template layout="UIMarketingLayout">
 
     <!-- Hero Section -->
-    <Hero></Hero>
+    <Hero :data="heroData"></Hero>
 
     <!-- Our Services Section -->
     <TypeOfServicesToggle :data="faqsData"></TypeOfServicesToggle>
 
     <!-- Your Advantage Section -->
-    <AwExplanationParagraph></AwExplanationParagraph>
+    <AwExplanationParagraph :data="awExplanationData"></AwExplanationParagraph>
 
     <!--  Contact us section -->
     <ContactUs></ContactUs>
