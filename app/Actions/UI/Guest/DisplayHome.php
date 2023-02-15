@@ -19,6 +19,9 @@ class DisplayHome
     {
         $data = [
             'faqsData' => [
+                'title' => [
+                    'main' => 'Our Service'
+                ],
                 'questions' => [
                     'first' => [
                         'question' => 'PPC',

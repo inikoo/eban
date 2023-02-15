@@ -20,9 +20,9 @@ defineProps(['data'])
                 <img :src='OurServicePlantImage' class="rounded-3xl" alt="ServicePlant Image">
             </div>
             <div class=" md:max-w-md sm:max-w-xl divide-y-2 divide-black max-w"> <!-- mx-auto max-w-3xl -->
-                <h2 class="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Our Services</h2>
+                <h2 class="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{data.title.main}}</h2>
                 <dl class="mt-6 space-y-6 divide-y divide-black ">
-                    <Disclosure as="div" v-for="faq in data" :key="faq" class="pt-6 " v-slot="{ open }">
+                    <Disclosure as="div" class="pt-6 " v-slot="{ open }">
                         <dt class="text-lg text-center">
                             <DisclosureButton class="flex w-full items-start justify-between  text-gray-400">
                                 <span class="font-medium text-gray-900 text-center">{{
@@ -38,7 +38,7 @@ defineProps(['data'])
                             <p class="text-base text-gray-500 font-light">{{ data.questions.first.answer }}</p>
                         </DisclosurePanel>
                     </Disclosure>
-                    <Disclosure as="div" v-for="faq in data" :key="faq" class="pt-6" v-slot="{ open }">
+                    <Disclosure as="div"  class="pt-6" v-slot="{ open }">
                         <dt class="text-lg">
                             <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-400">
                                 <span class="font-medium text-gray-900">{{ data.questions.second.question }}</span>
@@ -52,7 +52,7 @@ defineProps(['data'])
                             <p class="text-base text-gray-500 font-light">{{ data.questions.second.answer }}</p>
                         </DisclosurePanel>
                     </Disclosure>
-                    <Disclosure as="div" v-for="faq in data" :key="faq" class="pt-6" v-slot="{ open }">
+                    <Disclosure as="div"  class="pt-6" v-slot="{ open }">
                         <dt class="text-lg">
                             <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-400">
                                 <span class="font-medium text-gray-900">{{ data.questions.third.question }}</span>
@@ -66,7 +66,7 @@ defineProps(['data'])
                             <p class="text-base text-gray-500 font-light">{{ data.questions.third.answer }}</p>
                         </DisclosurePanel>
                     </Disclosure>
-                    <Disclosure as="div" v-for="faq in data" :key="faq" class="pt-6" v-slot="{ open }">
+                    <Disclosure as="div" class="pt-6" v-slot="{ open }">
                         <dt class="text-lg">
                             <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-400">
                                 <span class="font-medium text-gray-900">{{ data.questions.fourth.question }}</span>
