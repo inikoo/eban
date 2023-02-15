@@ -3,18 +3,21 @@
 import ContactInformation from "@/Components/UIMarketing/Sections/ContactInformation.vue";
 import SubscribeNewsletter from "@/Components/UIMarketing/Sections/SubscribeNewsletter.vue";
 
+defineProps(['contactInformationData', 'subscribeNewsletterData'])
+
 </script>
 
 
 <template layout="UIMarketingLayout">
 
-    <ContactInformation></ContactInformation>
+    <ContactInformation :data="contactInformationData"></ContactInformation>
     <!-- Subscribe to newsletter -->
-    <SubscribeNewsletter></SubscribeNewsletter>
+    <SubscribeNewsletter :data="subscribeNewsletterData"></SubscribeNewsletter>
     <div class="grid justify-center md:hidden lg:hidden xl:hidden 2xl:hidden bg-gray-50">
         <div class="">
             <div class="mx-auto max-w-7xl py-12 px-6 lg:py-16 lg:px-8">
                 <h2 class="inline text-3xl font-bold tracking-tight text-gray-900 sm:block sm:text-4xl">Want product news and updates?</h2>
+                <br>
                 <p class="inline text-3xl font-bold tracking-tight text-indigo-600 sm:block sm:text-4xl">Sign up for our newsletter.</p>
                 <form class="mt-8 sm:flex xl:ml-12 2xl:ml-32">
                     <label for="email-address" class="sr-only">Email address</label>

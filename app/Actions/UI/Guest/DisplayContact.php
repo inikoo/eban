@@ -16,7 +16,32 @@ class DisplayContact{
 
     function handle(): Response
     {
-        return Inertia::render('UIMarketing/Contact');
+        $data = [
+            'contactInformationData' => [
+                'information' => [
+                    'title' => 'Contact information',
+                    'paragraph' => 'Authentic, simple and honest. We promise not to blind you with complexity,
+                                or employ dodgy technics to make your results look better.',
+                    'phoneNumber' => '+1 (555) 123-4567',
+                    'email' => 'support@workcation.com'
+                ],
+                'form' => [
+                    'title' => 'Send us a message',
+                    'name' => 'First name',
+                    'lastName' => 'Last name',
+                    'email' => 'Email',
+                    'phoneNumber' => 'Phone',
+                    'subject' => 'Subject',
+                    'message' => 'Message',
+                    'maxCharacters' => 'Max. 500 characters',
+                ]
+            ],
+            'subscribeNewsletterData' => [
+                'title' => 'Want product news and updates? Sign up for our newsletter.',
+                'button' => 'Notify me',
+            ],
+        ];
+        return Inertia::render('UIMarketing/Contact', $data);
     }
 }
 

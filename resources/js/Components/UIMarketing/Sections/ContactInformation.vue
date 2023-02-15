@@ -1,6 +1,8 @@
 <script setup>
 
 import PrimaryButton from "@/Components/PrimaryButton.vue";
+
+defineProps(['data'])
 </script>
 
 <template>
@@ -52,19 +54,18 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
                     </defs>
                 </svg>
             </div>
-            <h3 class="text-lg font-medium text-black">Contact information</h3>
-            <p class="mt-6 max-w-3xl text-base text-black">Nullam risus blandit ac aliquam justo ipsum. Quam mauris
-                volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+            <h3 class="text-lg font-medium text-black">{{data.information.title}}</h3>
+            <p class="mt-6 max-w-3xl text-base text-black">{{data.information.paragraph}}</p>
             <dl class="mt-8 space-y-4 ">
                 <dt><span class="sr-only text-black">Phone number</span></dt>
                 <dd class="flex text-base text-teal-50 ">
                     <PhoneIcon class="h-6 w-6 flex-shrink-0 text-teal-200" aria-hidden="true"/>
-                    <span class=" text-black ">+1 (555) 123-4567</span>
+                    <span class=" text-black ">{{data.information.popheNumber}}</span>
                 </dd>
                 <dt><span class="sr-only text-black">Email</span></dt>
                 <dd class="flex text-base text-teal-50">
                     <EnvelopeIcon class="h-6 w-6 flex-shrink-0 text-teal-200" aria-hidden="true"/>
-                    <span class=" text-black">support@workcation.com</span>
+                    <span class=" text-black">{{data.information.email}}</span>
                 </dd>
             </dl>
             <ul role="list" class="mt-8 flex space-x-12">
@@ -102,24 +103,24 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
 
         <!-- Contact form -->
         <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-            <h3 class="text-lg font-medium text-warm-gray-900">Send us a message</h3>
+            <h3 class="text-lg font-medium text-warm-gray-900">{{data.form.title}}</h3>
             <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
-                    <label for="first-name" class="block text-sm font-medium text-warm-gray-900">First name</label>
+                    <label for="first-name" class="block text-sm font-medium text-warm-gray-900">{{data.form.name}}</label>
                     <div class="mt-1">
                         <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                                class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"/>
                     </div>
                 </div>
                 <div>
-                    <label for="last-name" class="block text-sm font-medium text-warm-gray-900">Last name</label>
+                    <label for="last-name" class="block text-sm font-medium text-warm-gray-900">{{data.form.lastName}}</label>
                     <div class="mt-1">
                         <input type="text" name="last-name" id="last-name" autocomplete="family-name"
                                class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"/>
                     </div>
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium text-warm-gray-900">Email</label>
+                    <label for="email" class="block text-sm font-medium text-warm-gray-900">{{data.form.email}}</label>
                     <div class="mt-1">
                         <input id="email" name="email" type="email" autocomplete="email"
                                class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"/>
@@ -127,7 +128,7 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
                 </div>
                 <div>
                     <div class="flex justify-between">
-                        <label for="phone" class="block text-sm font-medium text-warm-gray-900">Phone</label>
+                        <label for="phone" class="block text-sm font-medium text-warm-gray-900">{{data.form.phone}}</label>
                         <span id="phone-optional" class="text-sm text-warm-gray-500">Optional</span>
                     </div>
                     <div class="mt-1">
@@ -137,7 +138,7 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
                     </div>
                 </div>
                 <div class="sm:col-span-2">
-                    <label for="subject" class="block text-sm font-medium text-warm-gray-900">Subject</label>
+                    <label for="subject" class="block text-sm font-medium text-warm-gray-900">{{data.form.subject}}</label>
                     <div class="mt-1">
                         <input type="text" name="subject" id="subject"
                                class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"/>
@@ -145,8 +146,8 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
                 </div>
                 <div class="sm:col-span-2">
                     <div class="flex justify-between">
-                        <label for="message" class="block text-sm font-medium text-warm-gray-900">Message</label>
-                        <span id="message-max" class="text-sm text-warm-gray-500">Max. 500 characters</span>
+                        <label for="message" class="block text-sm font-medium text-warm-gray-900">{{data.form.message}}</label>
+                        <span id="message-max" class="text-sm text-warm-gray-500">{{data.form.maxCharacters}}</span>
                     </div>
                     <div class="mt-1">
                         <textarea id="message" name="message" rows="4"
