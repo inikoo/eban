@@ -144,10 +144,10 @@ const solutions = [
                     </Link>
                 </PopoverGroup>
                 <div class="flex  justify-end lg:w-0 lg:flex-1">
-                    <a href="#">
+                    <Link :href="route('ui-marketing.home')">
                         <!-- <span class="sr-only">Your Company</span> -->
                         <img class="object-cover" width="350" height="350" :src='LogoImage' alt=""/>
-                    </a>
+                    </Link>
                 </div>
                 <div class="-my-2 mr-7 md:hidden">
                     <PopoverButton
