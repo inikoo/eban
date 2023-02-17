@@ -7,6 +7,7 @@
 
 use App\Actions\UI\Guest\DisplayAbout;
 use App\Actions\UI\Guest\DisplayCategoryFilters;
+use App\Actions\UI\Guest\DisplayCategoryPreviews;
 use App\Actions\UI\Guest\DisplayContact;
 use App\Actions\UI\Guest\DisplayHome;
 use App\Actions\UI\Guest\DisplayPricingPage;
@@ -35,6 +36,9 @@ Route::get('/terms', DisplayTerms::class)->name('terms');
 Route::get('/contact', DisplayContact::class)->name('contact');
 
 Route::get('/categoryfilters', DisplayCategoryFilters::class)->name('categoryfilters');
+
+Route::get('/categorypreviews', DisplayCategoryPreviews::class)->name('categorypreviews');
+
 
 
 

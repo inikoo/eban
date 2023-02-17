@@ -4,12 +4,11 @@ import Features from "@/Components/UIMarketing/SectionsTest/Features.vue";
 import Hero from "@/Components/UIMarketing/SectionsTest/Hero.vue";
 import CTA from "@/Components/UIMarketing/SectionsTest/CTA.vue";
 import Pricing from "@/Components/UIMarketing/SectionsTest/Pricing.vue";
-import FAQ from "@/Components/UIMarketing/Sections/TypeOfServicesToggle.vue";
 import Stats from "@/Components/UIMarketing/SectionsTest/Stats.vue";
 import Testimonial from "@/Components/UIMarketing/SectionsTest/Testimonial.vue";
 
 
-defineProps(['pricingData', 'ctaData', 'faqsData', 'homeSloganData', 'statsData', 'featuresData', 'testimonialData'])
+defineProps(['pricingData', 'ctaData', 'homeSloganData', 'statsData', 'featuresData', 'testimonialData'])
 
 
 
@@ -22,5 +21,4 @@ defineProps(['pricingData', 'ctaData', 'faqsData', 'homeSloganData', 'statsData'
     <CTA :data="ctaData"></CTA>
     <Pricing :data="pricingData"></Pricing>
     <Testimonial :data="testimonialData"></Testimonial>
-    <FAQ :data="faqsData"></FAQ>
 </template>
