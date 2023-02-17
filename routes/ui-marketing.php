@@ -13,6 +13,7 @@ use App\Actions\UI\Guest\DisplayContact;
 use App\Actions\UI\Guest\DisplayHome;
 use App\Actions\UI\Guest\DisplayIncentives;
 use App\Actions\UI\Guest\DisplayOrderHistory;
+use App\Actions\UI\Guest\DisplayOrderSummary;
 use App\Actions\UI\Guest\DisplayPricingPage;
 use App\Actions\UI\Guest\DisplayPrivacy;
 use App\Actions\UI\Guest\DisplayTerms;
@@ -47,6 +48,9 @@ Route::get('/checkoutforms', DisplayCheckoutForms::class)->name('checkoutforms')
 Route::get('/incentives', DisplayIncentives::class)->name('incentives');
 
 Route::get('/orderhistory', DisplayOrderHistory::class)->name('orderhistory');
+
+Route::get('/ordersummary', DisplayOrderSummary::class)->name('ordersummary');
+
 
 
 
