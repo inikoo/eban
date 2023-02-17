@@ -6,12 +6,9 @@
  */
 
 use App\Actions\UI\Guest\DisplayAbout;
-use App\Actions\UI\Guest\DisplayCompany;
+use App\Actions\UI\Guest\DisplayCategoryFilters;
 use App\Actions\UI\Guest\DisplayContact;
-use App\Actions\UI\Guest\DisplayFeatures;
-use App\Actions\UI\Guest\DisplayHomePageTestTwo;
 use App\Actions\UI\Guest\DisplayHome;
-use App\Actions\UI\Guest\DisplayMarketing;
 use App\Actions\UI\Guest\DisplayPricingPage;
 use App\Actions\UI\Guest\DisplayPrivacy;
 use App\Actions\UI\Guest\DisplayTerms;
@@ -25,11 +22,7 @@ Route::prefix('services')->name('products.')->group(function () {
     require __DIR__ . "/marketing/services.php";
 });
 
-Route::get('/features', DisplayFeatures::class)->name('features');
 
-Route::get('/company', DisplayCompany::class)->name('company');
-
-Route::get('/marketing', DisplayMarketing::class)->name('marketing');
 
 Route::get('/pricing', DisplayPricingPage::class)->name('pricing');
 
@@ -39,9 +32,10 @@ Route::get('/privacy', DisplayPrivacy::class)->name('privacy');
 
 Route::get('/terms', DisplayTerms::class)->name('terms');
 
-Route::get('/homepagetesttwo', DisplayHomePageTestTwo::class)->name('homepagetesttwo');
-
 Route::get('/contact', DisplayContact::class)->name('contact');
+
+Route::get('/categoryfilters', DisplayCategoryFilters::class)->name('categoryfilters');
+
 
 
 
