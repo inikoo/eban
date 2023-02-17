@@ -17,6 +17,7 @@ use App\Actions\UI\Guest\DisplayOrderSummary;
 use App\Actions\UI\Guest\DisplayPricingPage;
 use App\Actions\UI\Guest\DisplayPrivacy;
 use App\Actions\UI\Guest\DisplayProductFeatures;
+use App\Actions\UI\Guest\DisplayProductList;
 use App\Actions\UI\Guest\DisplayTerms;
 use Illuminate\Support\Facades\Route;
 
@@ -53,6 +54,9 @@ Route::get('/orderhistory', DisplayOrderHistory::class)->name('orderhistory');
 Route::get('/ordersummary', DisplayOrderSummary::class)->name('ordersummary');
 
 Route::get('/productfeatures', DisplayProductFeatures::class)->name('productfeatures');
+
+Route::get('/productlist', DisplayProductList::class)->name('productlist');
+
 
 
 
