@@ -11,6 +11,7 @@ use App\Actions\UI\Guest\DisplayCategoryPreviews;
 use App\Actions\UI\Guest\DisplayCheckoutForms;
 use App\Actions\UI\Guest\DisplayContact;
 use App\Actions\UI\Guest\DisplayHome;
+use App\Actions\UI\Guest\DisplayIncentives;
 use App\Actions\UI\Guest\DisplayPricingPage;
 use App\Actions\UI\Guest\DisplayPrivacy;
 use App\Actions\UI\Guest\DisplayTerms;
@@ -41,6 +42,9 @@ Route::get('/categoryfilters', DisplayCategoryFilters::class)->name('categoryfil
 Route::get('/categorypreviews', DisplayCategoryPreviews::class)->name('categorypreviews');
 
 Route::get('/checkoutforms', DisplayCheckoutForms::class)->name('checkoutforms');
+
+Route::get('/incentives', DisplayIncentives::class)->name('incentives');
+
 
 
 
