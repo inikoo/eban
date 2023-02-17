@@ -59,7 +59,7 @@ const initialiseApp = inject('initialiseApp');
 const layout = initialiseApp();
 
 const solutions = [
-    {
+    /*{
         name: 'Ads',
         description: 'Hello',
         route: 'ui-marketing.products.adwords',
@@ -81,6 +81,72 @@ const solutions = [
         name: 'Bannersnack',
         description: 'Hello',
         route: 'ui-marketing.products.banners',
+        icon: Squares2X2Icon,
+    },*/
+    {
+        name: 'CategoryFilters',
+        description: 'Hello',
+        route: 'ui-marketing.categoryfilters',
+        icon: ChartBarIcon,
+    },
+    {
+        name: 'CategoryPreview',
+        description: 'Hello',
+        route: 'ui-marketing.categorypreviews',
+        icon: CursorArrowRaysIcon,
+    },
+    {
+        name: 'CheckoutForms',
+        description: 'Hello',
+        route: 'ui-marketing.checkoutforms',
+        icon: ShieldCheckIcon
+    },
+    {
+        name: 'Incentives',
+        description: 'Hello',
+        route: 'ui-marketing.incentives',
+        icon: Squares2X2Icon,
+    },
+    {
+        name: 'OrderHistory',
+        description: 'Hello',
+        route: 'ui-marketing.orderhistory',
+        icon: ChartBarIcon,
+    },
+    {
+        name: 'OrderSummaries',
+        description: 'Hello',
+        route: 'ui-marketing.ordersummary',
+        icon: CursorArrowRaysIcon,
+    },
+    {
+        name: 'ProductFeatures',
+        description: 'Hello',
+        route: 'ui-marketing.productfeatures',
+        icon: ShieldCheckIcon
+    },
+    {
+        name: 'ProductList',
+        description: 'Hello',
+        route: 'ui-marketing.productlist',
+        icon: Squares2X2Icon,
+    },
+    {
+        name: 'ProductOverviews',
+        description: 'Hello',
+        route: 'ui-marketing.productoverview',
+        icon: ChartBarIcon,
+    },
+    {
+        name: 'PromoSections',
+        description: 'Hello',
+        route: 'ui-marketing.promosections',
+        icon: ShieldCheckIcon
+    },
+    {
+        name: 'ShoppingCarts',
+        description: 'Hello',
+        route: 'ui-marketing.shoppingcarts',
         icon: Squares2X2Icon,
     }
 ]
