@@ -5,23 +5,12 @@ import SubscribeNewsletter from "@/Components/UIMarketing/Sections/SubscribeNews
 
 defineProps(['contactInformationData', 'subscribeNewsletterData'])
 
-import { shallowRef } from 'vue'
-import CompA from "@/Components/CompA.vue";
-import CompB from "@/Components/CompB.vue";
-
-const current = shallowRef(CompB)
 
 </script>
 
 
 <template layout="UIMarketingLayout">
-    <div class="demo">
-        <label><input type="radio" v-model="current" :value="CompA" /> A</label>
-        <label><input type="radio" v-model="current" :value="CompB" /> B</label>
-    </div>
-        <KeepAlive>
-            <component :is="current"></component>
-        </KeepAlive>
+
 
     <ContactInformation :data="contactInformationData"></ContactInformation>
     <!-- Subscribe to newsletter -->

@@ -19,6 +19,8 @@ use App\Actions\UI\Guest\DisplayPrivacy;
 use App\Actions\UI\Guest\DisplayProductFeatures;
 use App\Actions\UI\Guest\DisplayProductList;
 use App\Actions\UI\Guest\DisplayProductOverview;
+use App\Actions\UI\Guest\DisplayPromoSections;
+use App\Actions\UI\Guest\DisplayShoppingCarts;
 use App\Actions\UI\Guest\DisplayTerms;
 use Illuminate\Support\Facades\Route;
 
@@ -59,6 +61,12 @@ Route::get('/productfeatures', DisplayProductFeatures::class)->name('productfeat
 Route::get('/productlist', DisplayProductList::class)->name('productlist');
 
 Route::get('/productoverview', DisplayProductOverview::class)->name('productoverview');
+
+Route::get('/promosections', DisplayPromoSections::class)->name('promosections');
+
+Route::get('/shoppingcarts', DisplayShoppingCarts::class)->name('shoppingcarts');
+
+
 
 
 
