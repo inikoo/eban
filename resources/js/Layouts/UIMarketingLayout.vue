@@ -165,7 +165,7 @@ const solutions = [
                         Home
                     </Link>
                     <Popover class="relative" v-slot="{ open }">
-                        <PopoverButton
+                        <PopoverButton class=""
 
                             :class="[open ? 'text-gray-900' : 'text-gray-500', 'group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2']">
                             <span>Ecommerce</span>
